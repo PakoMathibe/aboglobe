@@ -1,0 +1,98 @@
+/* =========================================================
+   RESET & BASE TYPOGRAPHY
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--brand-dark);
+  background: var(--brand-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-feature-settings: 'ss01' 1, 'ss02' 1, 'cv11' 1;
+}
+
+img, picture, video, svg { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1.02;
+  color: var(--brand-dark);
+  text-wrap: balance;
+  font-style: normal;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: .98;
+}
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 750;
+  letter-spacing: -.04em;
+  line-height: 1.05;
+}
+h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 650;
+  letter-spacing: -.025em;
+}
+h4 {
+  font-size: 1.125rem;
+  font-weight: 650;
+  letter-spacing: -.015em;
+}
+
+/* Serif display accent — used explicitly via .font-display */
+.font-display {
+  font-family: var(--font-display) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: -.02em !important;
+}
+
+/* Legacy .font-serif alias renders as display serif */
+.font-serif {
+  font-family: var(--font-display) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+blockquote { font-style: normal; }
+em, i { font-style: normal; }
+em.font-display, i.font-display { font-style: italic !important; }
+
+a { color: inherit; text-decoration: none; }
+a:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

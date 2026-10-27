@@ -1,0 +1,150 @@
+/* =========================================================
+   ANIMATIONS & SCROLL EFFECTS
+   ========================================================= */
+
+.scroll-progress {
+  position: fixed; top: 0; left: 0;
+  height: 2px; width: 0%;
+  background: linear-gradient(90deg, var(--brand-gold), var(--brand-goldlt));
+  z-index: 10000;
+  transition: width .08s linear;
+  box-shadow: 0 0 12px var(--brand-gold-glow);
+}
+
+/* ---- Preloader ---- */
+#preloader {
+  position: fixed; inset: 0;
+  background: var(--brand-dark);
+  z-index: 99999;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1.5rem;
+  transition: opacity .7s var(--ease-out), visibility .7s;
+}
+#preloader.done { opacity: 0; visibility: hidden; }
+.preloader-mark {
+  width: 60px; height: 60px;
+  border: 2px solid rgba(201,165,92,.2);
+  border-top-color: var(--brand-gold);
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+}
+.preloader-text {
+  color: var(--brand-cream);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  opacity: .7;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Cursor glow ---- */
+.cursor-glow {
+  position: fixed;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,165,92,.09) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+@media (hover:hover) and (pointer:fine) { .cursor-glow { opacity: 1; } }
+
+/* ---- Glass nav ---- */
+.glass-nav {
+  background: rgba(250,248,244,.72);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1px solid rgba(74,48,32,.06);
+  transition: background .3s, box-shadow .3s;
+}
+.glass-nav.scrolled {
+  background: rgba(250,248,244,.92);
+  box-shadow: 0 4px 24px -8px rgba(26,15,8,.08);
+}
+
+/* ---- Text gradient ---- */
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-mid) 0%, var(--brand-gold) 55%, var(--brand-goldlt) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Scroll reveal ---- */
+.reveal, .reveal-left, .reveal-right, .reveal-scale {
+  opacity: 0;
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.reveal       { transform: translateY(32px); }
+.reveal-left  { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(.94); }
+.reveal.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+  opacity: 1; transform: none;
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* ---- Hero blobs ---- */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .3;
+  pointer-events: none;
+}
+@keyframes float-a {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(28px,-28px) scale(1.08); }
+}
+@keyframes float-b {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(-22px,24px) scale(1.05); }
+}
+.animate-float     { animation: float-a 13s ease-in-out infinite; }
+.animate-float-rev { animation: float-b 15s ease-in-out infinite; }
+
+/* ---- Ticker ---- */
+.ticker-strip {
+  overflow: hidden; white-space: nowrap;
+  border-block: 1px solid rgba(74,48,32,.06);
+  background: rgba(255,255,255,.5);
+  backdrop-filter: blur(12px);
+}
+.ticker-track {
+  display: inline-flex;
+  gap: 3.5rem;
+  padding: 1rem 0;
+  animation: ticker-scroll 48s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-item {
+  display: inline-flex; align-items: center; gap: .75rem;
+  font-family: var(--font-sans);
+  font-size: .75rem; font-weight: 600;
+  color: var(--brand-mid);
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.ticker-item .dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
+}
+.ticker-item .delta {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.ticker-item .delta.up   { color: var(--accent-emerald); }
+.ticker-item .delta.down { color: var(--accent-rose); }

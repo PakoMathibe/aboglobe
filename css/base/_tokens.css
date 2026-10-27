@@ -1,0 +1,62 @@
+/* =========================================================
+   DESIGN TOKENS — brand, typography, spacing, motion
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  /* ---- Brand palette ---- */
+  --brand-dark:      #1a0f08;
+  --brand-deep:      #2d1b10;
+  --brand-mid:       #4a3020;
+  --brand-light:     #8b6846;
+  --brand-gold:      #c9a55c;
+  --brand-goldlt:    #e8c98a;
+  --brand-gold-glow: rgba(201, 165, 92, 0.35);
+  --brand-cream:     #faf8f4;
+  --brand-creamdk:   #f2ece1;
+  --brand-white:     #ffffff;
+  --text-muted:      #6b5b4f;
+  --text-subtle:     #9a8b7e;
+
+  /* ---- Accent colors ---- */
+  --accent-emerald:    #10b981;
+  --accent-emerald-bg: rgba(16, 185, 129, 0.08);
+  --accent-rose:       #e11d48;
+  --accent-rose-bg:    rgba(225, 29, 72, 0.08);
+  --accent-blue:       #3b82f6;
+  --accent-blue-bg:    rgba(59, 130, 246, 0.08);
+
+  /* ---- Typography ---- */
+  --font-sans:    'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --font-display: 'Instrument Serif', serif;
+
+  /* ---- Spacing ---- */
+  --space-section: clamp(6rem, 12vw, 10rem);
+  --space-block:   clamp(2.5rem, 5vw, 4rem);
+
+  /* ---- Shadows ---- */
+  --shadow-xs:   0 1px 2px rgba(26,15,8,.04);
+  --shadow-sm:   0 2px 8px -1px rgba(26,15,8,.06), 0 1px 2px rgba(26,15,8,.04);
+  --shadow-md:   0 8px 24px -6px rgba(26,15,8,.10), 0 2px 6px rgba(26,15,8,.04);
+  --shadow-lg:   0 24px 48px -12px rgba(26,15,8,.16), 0 4px 12px rgba(26,15,8,.06);
+  --shadow-xl:   0 40px 80px -20px rgba(26,15,8,.24), 0 8px 24px rgba(26,15,8,.08);
+  --shadow-gold: 0 16px 40px -10px rgba(201,165,92,.30);
+  --shadow-inner: inset 0 1px 0 rgba(255,255,255,.6);
+  --shadow-glow: 0 0 60px -12px var(--brand-gold-glow);
+
+  /* ---- Motion ---- */
+  --ease-out:    cubic-bezier(.16,1,.3,1);
+  --ease-spring: cubic-bezier(.34,1.56,.64,1);
+  --ease-smooth: cubic-bezier(.4,0,.2,1);
+  --dur:         .5s;
+
+  /* ---- Radius ---- */
+  --radius-sm:   .5rem;
+  --radius-md:   .75rem;
+  --radius-lg:   1.25rem;
+  --radius-xl:   1.75rem;
+  --radius-2xl:  2.5rem;
+  --radius-full: 9999px;
+}
