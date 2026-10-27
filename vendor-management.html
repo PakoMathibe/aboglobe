@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vendor Management System | ABOGLOBE International INC</title>
+  <meta name="description" content="ABOGLOBE's Vendor Management System — 12 procurement workflows, 4 system integrations, and 4 success factors. From self-registration to business intelligence." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vendor Management System — ABOGLOBE" />
+  <meta property="og:description" content="12 workflows. 4 integrations. 4 success factors. The complete VMS platform." />
+  <meta property="og:image" content="images/hero-container-ship.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/vms.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-mark"></div>
+    <div class="preloader-text">ABOGLOBE</div>
+  </div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="vendor-management.html" class="nav-link" aria-current="page">Vendor Management</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="vendor-management.html" class="text-brand-dark font-semibold text-lg mt-2">Vendor Management</a>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Vendor Management System</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Vendor management, <span class="text-gradient">end to end.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              Twelve procurement workflows. Four system integrations. Four success factors. One platform that turns vendor chaos into a controlled, auditable, automated operation.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-8">
+              <a href="contact.html" class="btn btn-primary">
+                Request a Demo <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#workflows" class="btn btn-outline">Explore Workflows</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-6 pt-8 text-xs text-brand-mid/60">
+              <div class="flex items-center gap-2"><i class="lni lni-flow-merge text-brand-gold" aria-hidden="true"></i> 12 workflows</div>
+              <div class="flex items-center gap-2"><i class="lni lni-plug text-brand-gold" aria-hidden="true"></i> 4 integrations</div>
+              <div class="flex items-center gap-2"><i class="lni lni-lock text-brand-gold" aria-hidden="true"></i> Audit-ready</div>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/hero-container-ship.jpg"
+                   alt="Global supply chain represented by container ships"
+                   width="600" height="450" fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-package&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">Platform</span>
+                <span class="hero-image-badge-value">Workflows · Integrations · Analytics</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAR ============ -->
+    <section aria-label="Key figures" class="px-6 relative z-30 -mt-8">
+      <div class="stats-strip reveal">
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="12" data-suffix="">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Procurement Workflows</p>
+        </div>
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="4" data-suffix="">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">System Integrations</p>
+        </div>
+        <div class="p-10 text-center">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="4" data-suffix="">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Success Factors</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKFLOWS ============ -->
+    <section id="workflows" class="py-32 bg-white" aria-labelledby="workflows-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Twelve Workflows</span>
+          <h2 id="workflows-heading" class="text-4xl md:text-5xl mb-4">Every step, automated.</h2>
+          <p class="text-lg text-brand-mid/70">From vendor self-registration through business intelligence — twelve workflows that cover the entire procurement lifecycle.</p>
+        </header>
+
+        <div class="vms-workflow-grid">
+
+          <article class="vms-workflow-card reveal">
+            <span class="vms-workflow-num">01</span>
+            <div class="vms-workflow-icon"><i class="lni lni-user" aria-hidden="true"></i></div>
+            <h3>Vendor self-registration</h3>
+            <p>Define what information you need from vendors to work productively forever after — with relevant steps, fill-in fields, and document requirements built into the registration process.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-100">
+            <span class="vms-workflow-num">02</span>
+            <div class="vms-workflow-icon"><i class="lni lni-checkmark-circle" aria-hidden="true"></i></div>
+            <h3>Vendor onboarding</h3>
+            <p>Set a vendor assessment framework so the VMS automatically scores registered vendors against your criteria. This pre-onboarding step builds a low-risk vendor portfolio from day one.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-200">
+            <span class="vms-workflow-num">03</span>
+            <div class="vms-workflow-icon"><i class="lni lni-id-card" aria-hidden="true"></i></div>
+            <h3>Vendor profile management</h3>
+            <p>Vendors manage their own business information independently. This keeps profiles up to date automatically — no direct control required from your team.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal">
+            <span class="vms-workflow-num">04</span>
+            <div class="vms-workflow-icon"><i class="lni lni-layers" aria-hidden="true"></i></div>
+            <h3>Vendor segmentation</h3>
+            <p>Plan and implement the best-suited segmentation model for your supplier base — for example, give the highest strategic priority to suppliers of high-volume or high-value products.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-100">
+            <span class="vms-workflow-num">05</span>
+            <div class="vms-workflow-icon"><i class="lni lni-file" aria-hidden="true"></i></div>
+            <h3>Purchase requisition</h3>
+            <p>Create as many requisition templates as needed — one per department, one per procurement purpose, one per commodity category. Each describes the required products or services.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-200">
+            <span class="vms-workflow-num">06</span>
+            <div class="vms-workflow-icon"><i class="lni lni-checkmark-square" aria-hidden="true"></i></div>
+            <h3>Requisition approval</h3>
+            <p>The VMS routes requisitions through multi-level approval workflows and sends automated notifications to responsible employees according to the rules you set. Approvals can span departments.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal">
+            <span class="vms-workflow-num">07</span>
+            <div class="vms-workflow-icon"><i class="lni lni-comments" aria-hidden="true"></i></div>
+            <h3>Request for Quote (RFQ)</h3>
+            <p>Suppliers are notified when invited to participate in a bidding process. They can submit their offering for direct price competition — no manual coordination required.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-100">
+            <span class="vms-workflow-num">08</span>
+            <div class="vms-workflow-icon"><i class="lni lni-bar-chart" aria-hidden="true"></i></div>
+            <h3>Processing bid responses</h3>
+            <p>When the bid submission period expires, evaluate bids side by side and decide on a vendor of choice. No manual tracking of emails, no risk of missing a price quote.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-200">
+            <span class="vms-workflow-num">09</span>
+            <div class="vms-workflow-icon"><i class="lni lni-reload" aria-hidden="true"></i></div>
+            <h3>Automated PO creation</h3>
+            <p>If price bidding isn't needed, set the VMS to create purchase orders automatically from approved requisitions and send them to the chosen vendor — one fewer manual step, no procurement delays.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal">
+            <span class="vms-workflow-num">10</span>
+            <div class="vms-workflow-icon"><i class="lni lni-wallet" aria-hidden="true"></i></div>
+            <h3>Invoicing</h3>
+            <p>Invoices are created automatically from an approved purchase order (or any part of one). Taxes are applied based on origin- and destination-based rules. The invoice is immediately ready to pay.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-100">
+            <span class="vms-workflow-num">11</span>
+            <div class="vms-workflow-icon"><i class="lni lni-package" aria-hidden="true"></i></div>
+            <h3>Order management</h3>
+            <p>Full visibility into every procurement order. Track progress, contact vendors for delay explanations, and access shipment documents — all in one place.</p>
+          </article>
+
+          <article class="vms-workflow-card reveal delay-200">
+            <span class="vms-workflow-num">12</span>
+            <div class="vms-workflow-icon"><i class="lni lni-dashboard" aria-hidden="true"></i></div>
+            <h3>Business intelligence</h3>
+            <p>Built-in analytics turn vendor performance data into actionable insight — uncovering opportunities for cost savings and risk mitigation across the entire supplier base.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTEGRATIONS ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="integrations-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Integrations</span>
+          <h2 id="integrations-heading" class="text-4xl md:text-5xl mb-4">Fits into your existing stack.</h2>
+          <p class="text-lg text-brand-mid/70">The VMS connects to the tools your team already uses — accounting, ERP, HR, and intranet.</p>
+        </header>
+
+        <div class="vms-integrations-grid">
+
+          <article class="vms-integration-card reveal">
+            <div class="vms-integration-head">
+              <div class="vms-integration-icon"><i class="lni lni-calculator" aria-hidden="true"></i></div>
+              <h3>VMS + Accounting software</h3>
+            </div>
+            <ul>
+              <li>Deliver invoices directly to the responsible team — eliminating protractions caused by manual transfers.</li>
+              <li>Pay contractors from the same system where you book and track their work.</li>
+            </ul>
+          </article>
+
+          <article class="vms-integration-card reveal delay-100">
+            <div class="vms-integration-head">
+              <div class="vms-integration-icon"><i class="lni lni-factory" aria-hidden="true"></i></div>
+              <h3>VMS + ERP</h3>
+            </div>
+            <ul>
+              <li>Rely on manufacturing capacity plans for raw material procurement — avoiding understocks and overstocks.</li>
+              <li>Provide visibility into procurement order statuses for staff without a VMS login, such as the procurement planning team.</li>
+            </ul>
+          </article>
+
+          <article class="vms-integration-card reveal delay-200">
+            <div class="vms-integration-head">
+              <div class="vms-integration-icon"><i class="lni lni-users" aria-hidden="true"></i></div>
+              <h3>VMS + HR management</h3>
+            </div>
+            <ul>
+              <li>Surface current talent gaps and vacant positions needed for a limited period — for example, temporary specialists for a project.</li>
+            </ul>
+          </article>
+
+          <article class="vms-integration-card reveal delay-300">
+            <div class="vms-integration-head">
+              <div class="vms-integration-icon"><i class="lni lni-network" aria-hidden="true"></i></div>
+              <h3>VMS + Intranet</h3>
+            </div>
+            <ul>
+              <li>Collect office supply requests directly from staff through the intranet, then organize them into requisition lists automatically.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUCCESS FACTORS ============ -->
+    <section class="py-32 bg-white" aria-labelledby="factors-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Success Factors</span>
+          <h2 id="factors-heading" class="text-4xl md:text-5xl mb-4">What makes it work.</h2>
+          <p class="text-lg text-brand-mid/70">Four foundational capabilities that turn the VMS from a tool into a competitive advantage.</p>
+        </header>
+
+        <div class="vms-factors-grid">
+
+          <article class="vms-factor-card reveal">
+            <div class="vms-factor-icon"><i class="lni lni-file" aria-hidden="true"></i></div>
+            <h3>E-document management</h3>
+            <p>Create, e-sign, and exchange documents with vendors digitally — from contracts and certificates to POs and invoices. No paper. No printing. No lost emails.</p>
+          </article>
+
+          <article class="vms-factor-card reveal delay-100">
+            <div class="vms-factor-icon"><i class="lni lni-star-filled" aria-hidden="true"></i></div>
+            <h3>Vendor rating functionality</h3>
+            <p>Automatically score vendors based on user-defined performance assessment criteria. Turn subjective "they feel reliable" into a measurable, comparable, audit-ready number.</p>
+          </article>
+
+          <article class="vms-factor-card reveal delay-200">
+            <div class="vms-factor-icon"><i class="lni lni-bolt" aria-hidden="true"></i></div>
+            <h3>Maximized workflow automation</h3>
+            <p>Eliminate manual effort across every rule-based vendor management task — approvals, payment initiation and control, escalation of delays and challenges, and everything in between.</p>
+          </article>
+
+          <article class="vms-factor-card reveal delay-300">
+            <div class="vms-factor-icon"><i class="lni lni-list" aria-hidden="true"></i></div>
+            <h3>Well-designed checklists</h3>
+            <p>Onboarding and offboarding checklists that cover documentation, work instructions, access to corporate resources, and team introductions — for every role, every subsidiary, and remote or in-office positions.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Ready to see it work?</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">Book a 20-minute walkthrough with our team. We'll show you the vendor workflows, integrations, and analytics live — on your data or ours.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="btn btn-gold text-lg">Book a Demo</a>
+          <a href="vendor-portal.html" class="btn btn-ghost-light text-lg">Try the Portal</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="vendor-management.html" class="hover:text-brand-gold transition-colors">Vendor Management</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

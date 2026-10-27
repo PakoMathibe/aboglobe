@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Investment Products &amp; Trade Finance | ABOGLOBE International INC</title>
+  <meta name="description" content="DLC, SBLC, and BG instruments backed by established international banking relationships — structured by ABOGLOBE International INC for global trade and capital growth." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trade Finance &amp; Structured Investment — ABOGLOBE International INC" />
+  <meta property="og:description" content="DLC, SBLC, BG instruments and structured finance solutions for global trade, backed by tier-1 banking relationships." />
+  <meta property="og:image" content="images/investment-hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { dark:'#2a1a11', mid:'#5e3f28', light:'#8b6846', gold:'#b88a4a', goldlight:'#d4af6a', cream:'#fdfbf7', creamdark:'#f4ebd9' } },
+      fontFamily: { sans:['Inter','sans-serif'], serif:['Inter','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <div id="preloader" aria-hidden="true"><div class="preloader-mark"></div><div class="preloader-text">ABOGLOBE</div></div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg mt-2">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Financial Investment</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Capital that <span class="text-gradient">moves with trade.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              DLC, SBLC, and BG instruments backed by established international banking relationships — structured for global trade and capital growth.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-8">
+              <a href="contact.html" class="btn btn-primary">
+                Speak to an Advisor <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#instruments" class="btn btn-outline">View Instruments</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-6 pt-8 text-xs text-brand-mid/60">
+              <div class="flex items-center gap-2"><i class="lni lni-shield text-brand-gold" aria-hidden="true"></i> Tier-1 banks</div>
+              <div class="flex items-center gap-2"><i class="lni lni-lock text-brand-gold" aria-hidden="true"></i> KYC / AML compliant</div>
+              <div class="flex items-center gap-2"><i class="lni lni-world text-brand-gold" aria-hidden="true"></i> Global issuance</div>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/investment-hero.jpg"
+                   alt="Trade finance documents on a walnut desk at golden hour"
+                   width="600" height="450" fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-investment&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">Global banking</span>
+                <span class="hero-image-badge-value">DLC · SBLC · BG</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAR ============ -->
+    <section aria-label="Key figures" class="px-6 relative z-30 -mt-8">
+      <div class="stats-strip reveal">
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="120" data-suffix="M+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">AUM Structured</p>
+        </div>
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="340" data-suffix="+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Instruments Issued</p>
+        </div>
+        <div class="p-10 text-center">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="18" data-suffix="">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Banking Partners</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTRUMENTS ============ -->
+    <section id="instruments" class="py-32 bg-brand-creamdark" aria-labelledby="instruments-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Instruments</span>
+          <h2 id="instruments-heading" class="text-4xl md:text-5xl mb-4">Diverse financial instruments.</h2>
+          <p class="text-brand-mid/70">Secure, compliant instruments to facilitate international business.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- DLC — reuses case-bg -->
+          <article class="instrument-card reveal">
+            <div class="instrument-image instrument-image--photo">
+              <img src="images/case-bg.jpg"
+                   alt="Documentary Letter of Credit documentation"
+                   width="400" height="140" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-document&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <h3 class="text-2xl mb-2">DLC</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-4">Documentary Letters of Credit</p>
+              <p class="text-brand-mid/70 leading-relaxed text-sm mb-6">Ensuring safe and transparent transactions between buyers and sellers across borders — the standard instrument for import/export finance.</p>
+              <div class="instrument-use"><span>Ideal for:</span> Trade finance · import/export · one-time transactions</div>
+              <ul class="instrument-features">
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Tier-1 issuing banks</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Fast issuance (7–14 days)</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- SBLC — reuses case-pe -->
+          <article class="instrument-card reveal delay-100">
+            <div class="instrument-image instrument-image--photo">
+              <img src="images/case-pe.jpg"
+                   alt="Standby Letter of Credit documentation"
+                   width="400" height="140" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-shield&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <h3 class="text-2xl mb-2">SBLC</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-4">Standby Letters of Credit</p>
+              <p class="text-brand-mid/70 leading-relaxed text-sm mb-6">Providing strong guarantees for high-value trade and investment operations — a bank-backed commitment that underwrites performance.</p>
+              <div class="instrument-use"><span>Ideal for:</span> High-value transactions · guarantees · multi-year contracts</div>
+              <ul class="instrument-features">
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Multi-year terms available</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Wide international acceptance</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- BG — reuses case-bg -->
+          <article class="instrument-card reveal delay-200">
+            <div class="instrument-image instrument-image--photo">
+              <img src="images/case-bg.jpg"
+                   alt="Bank guarantee documentation"
+                   width="400" height="140" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#b88a4a,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-bank&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <h3 class="text-2xl mb-2">BG</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-4">Bank Guarantees</p>
+              <p class="text-brand-mid/70 leading-relaxed text-sm mb-6">Supporting complex agreements and building trust in global financial transactions — performance, advance payment, and retention guarantees.</p>
+              <div class="instrument-use"><span>Ideal for:</span> Complex agreements · performance · EPC contracts</div>
+              <ul class="instrument-features">
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Performance &amp; payment</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> SWIFT-authenticated</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED INSTRUMENT SPOTLIGHT ============ -->
+    <section class="py-32 bg-brand-dark relative overflow-hidden" aria-labelledby="featured-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 reveal-left">
+          <span class="text-xs font-bold text-brand-goldlight uppercase tracking-[0.3em] mb-4 block">Recent Issuance</span>
+          <h2 id="featured-heading" class="text-white mb-6 leading-tight">
+            $40M <span class="text-brand-goldlight">Bank Guarantee</span>
+          </h2>
+          <p class="text-lg text-brand-cream/70 leading-relaxed mb-8 max-w-xl">
+            Structured through a tier-1 EU banking partner for a multinational commodity trading client — supporting a 2-year performance obligation across three jurisdictions.
+          </p>
+
+          <div class="grid grid-cols-3 gap-6 mb-10 max-w-lg">
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">$40M</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Notional</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">2 YR</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Term</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">3</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Jurisdictions</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn btn-gold">Discuss a Similar Structure <i class="lni lni-arrow-right" aria-hidden="true"></i></a>
+            <a href="#process" class="btn btn-ghost-light">See Our Process</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 reveal-right">
+          <div class="spotlight-card">
+            <div class="spotlight-image spotlight-image--photo">
+              <img src="images/investment-hero.jpg"
+                   alt="Executive boardroom with trade documentation"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-bank&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="spotlight-body">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Case Study</p>
+              <h4 class="font-bold mb-1">Commodity Trader · EU</h4>
+              <p class="text-sm text-brand-mid/70">$40M BG · 24-month performance security</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STRUCTURED FINANCE ============ -->
+    <section class="py-32 bg-white" aria-labelledby="finance-heading">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Structured Finance</span>
+          <h2 id="finance-heading" class="text-4xl md:text-5xl mb-6">Beyond trade finance.</h2>
+          <p class="text-lg text-brand-mid/70 leading-relaxed mb-8">Our investment division provides innovative structured finance solutions designed to manage risk and maximize returns.</p>
+          <div class="p-6 bg-brand-cream rounded-xl border border-brand-mid/10">
+            <p class="text-brand-mid/80 text-sm leading-relaxed">Through established partnerships with international banks, ABOGLOBE enhances the credibility and efficiency of all investment transactions.</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4 reveal delay-200">
+          <div class="finance-row">
+            <div class="finance-icon"><i class="lni lni-graph" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-xl mb-2">Private Equity</h3>
+              <p class="text-brand-mid/70">Access to high-growth investment opportunities worldwide — co-invest alongside tier-1 funds.</p>
+            </div>
+          </div>
+          <div class="finance-row">
+            <div class="finance-icon"><i class="lni lni-pie-chart" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-xl mb-2">Hedge Funds</h3>
+              <p class="text-brand-mid/70">Diversified strategies designed to manage risk and maximize returns — curated access to established managers.</p>
+            </div>
+          </div>
+          <div class="finance-row">
+            <div class="finance-icon"><i class="lni lni-arrows-vertical" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="text-xl mb-2">Capital Flow Optimization</h3>
+              <p class="text-brand-mid/70">Structuring investments across commodity supply, financial markets, and asset management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section id="process" class="py-32 bg-brand-creamdark" aria-labelledby="process-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-20 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Process</span>
+          <h2 id="process-heading" class="text-4xl md:text-5xl mb-6">From proposal to instrument.</h2>
+        </header>
+
+        <div class="process-track">
+          <div class="process-step reveal">
+            <div class="process-marker">01</div>
+            <h4 class="mb-3">Discuss Structure</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">We assess your trade profile and recommend the right instrument for your transaction.</p>
+          </div>
+          <div class="process-step reveal delay-100">
+            <div class="process-marker">02</div>
+            <h4 class="mb-3">KYC &amp; Compliance</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">Full regulatory review through our banking partners — AML, sanctions, and beneficial ownership checks.</p>
+          </div>
+          <div class="process-step reveal delay-200">
+            <div class="process-marker">03</div>
+            <h4 class="mb-3">Instrument Issuance</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">DLC, SBLC, or BG structured and issued within agreed terms — SWIFT-authenticated to your bank.</p>
+          </div>
+          <div class="process-step reveal delay-300">
+            <div class="process-marker">04</div>
+            <h4 class="mb-3">Deal Execution</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">Continued support through deal closing, settlement, and any amendments during the instrument's life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPLIANCE ============ -->
+    <section class="py-32 bg-white" aria-labelledby="compliance-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Compliance &amp; Governance</span>
+          <h2 id="compliance-heading" class="text-4xl md:text-5xl mb-4">Bank-grade compliance at every step.</h2>
+          <p class="text-lg text-brand-mid/70">Every instrument we structure passes through tier-1 bank compliance — no shortcuts, no exceptions.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <article class="cert-detail-card reveal">
+            <div class="cert-detail-icon"><i class="lni lni-shield" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">AML / KYC</h3>
+            <p class="cert-detail-body">Full anti-money-laundering and know-your-customer review through our banking partners.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-100">
+            <div class="cert-detail-icon"><i class="lni lni-lock" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Sanctions Screening</h3>
+            <p class="cert-detail-body">Every counterparty and beneficiary screened against OFAC, EU, UN, and Canadian sanctions lists.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-200">
+            <div class="cert-detail-icon"><i class="lni lni-world" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Tier-1 Banks</h3>
+            <p class="cert-detail-body">Instruments issued through established international banks — not offshore shell structures.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-300">
+            <div class="cert-detail-icon"><i class="lni lni-certificate-badge-1" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Legal Review</h3>
+            <p class="cert-detail-body">Each instrument reviewed by legal counsel in the relevant jurisdiction before issuance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASE STUDIES ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="case-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Recent Deals</span>
+          <h2 id="case-heading" class="text-4xl md:text-5xl mb-4">Selected engagements.</h2>
+          <p class="text-lg text-brand-mid/70">Real examples of instruments we've structured for clients worldwide.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="case-card fintech-card reveal">
+            <div class="case-image case-image--photo">
+              <img src="images/case-bg.jpg" alt="Bank guarantee documentation" width="400" height="170" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-bank&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Commodity Trading · EU</p>
+              <h3 class="text-lg mb-3">$40M Bank Guarantee</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">24-month performance security, structured through tier-1 EU bank for a multinational trader.</p>
+            </div>
+          </article>
+
+          <article class="case-card fintech-card reveal delay-100">
+            <div class="case-image case-image--photo">
+              <img src="images/case-pe.jpg" alt="Private equity boardroom" width="400" height="170" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#3b2518,#b88a4a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-graph&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Private Equity · APAC</p>
+              <h3 class="text-lg mb-3">$15M Co-Investment</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">Series B co-investment in Asia-Pacific agri-tech scale-up, alongside a tier-1 growth fund.</p>
+            </div>
+          </article>
+
+          <article class="case-card fintech-card reveal delay-200">
+            <div class="case-image case-image--photo">
+              <img src="images/case-bg.jpg" alt="Structured finance documentation" width="400" height="170" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#b88a4a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-arrows-vertical&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Structured Finance · LATAM</p>
+              <h3 class="text-lg mb-3">$22M SBLC Facility</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">Multi-draw standby facility supporting commodity imports across Brazil and Mexico.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADVISOR TEAM ============ -->
+    <section class="py-32 bg-white" aria-labelledby="advisors-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Advisory Team</span>
+          <h2 id="advisors-heading" class="text-4xl md:text-5xl mb-4">Speak to a specialist.</h2>
+          <p class="text-lg text-brand-mid/70">Senior advisors with deep experience across trade finance, structured deals, and cross-border banking.</p>
+        </header>
+
+        <div class="team-grid">
+          <!-- Trade Finance — reuses about-director -->
+          <article class="team-card reveal">
+            <div class="team-photo">
+              <img src="images/about-director.jpg" alt="ABOGLOBE trade finance advisor" width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('team-photo--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<span class=&quot;team-initials&quot;>TF</span>')" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl mb-1">Trade Finance Desk</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-2">Vancouver · HQ</p>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">DLC, SBLC and BG structuring for clients across North America and Asia-Pacific.</p>
+            </div>
+          </article>
+
+          <!-- Structured Finance — reuses leader-2 -->
+          <article class="team-card reveal delay-100">
+            <div class="team-photo">
+              <img src="images/leader-2.jpg" alt="ABOGLOBE structured finance advisor" width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('team-photo--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<span class=&quot;team-initials&quot;>SF</span>')" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl mb-1">Structured Finance</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-2">London · Partner Desk</p>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Co-investments, private equity, and complex cross-border capital structuring.</p>
+            </div>
+          </article>
+
+          <!-- Compliance — reuses leader-3 -->
+          <article class="team-card reveal delay-200">
+            <div class="team-photo">
+              <img src="images/leader-3.jpg" alt="ABOGLOBE compliance advisor" width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('team-photo--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<span class=&quot;team-initials&quot;>CP</span>')" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl mb-1">Compliance Desk</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-2">São Paulo · LATAM</p>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">KYC, AML and sanctions review — with regional expertise across Latin America.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <header class="text-center mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Questions</span>
+          <h2 id="faq-heading" class="text-4xl md:text-5xl mb-6">Investor FAQs.</h2>
+          <p class="text-lg text-brand-mid/70">Common questions from trade finance and structured investment clients.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>What's the minimum size for a DLC or SBLC?</summary>
+            <p>Typical minimum is $5M USD. Below that level, banks generally don't find the fee economics workable. For strategic clients and long-term relationships, we can structure smaller tranches under a master facility.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does issuance take?</summary>
+            <p>From complete KYC pack: 7–14 business days for standard DLCs, 10–21 days for SBLCs and BGs. Expedited issuance is available for established clients.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which banks do you work with?</summary>
+            <p>We work with 18 tier-1 banks across Europe, Asia, and North America. Specific bank selection depends on your jurisdiction, currency, and deal structure — we recommend the best fit.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What KYC documentation is required?</summary>
+            <p>Standard corporate pack: certificate of incorporation, beneficial ownership chart, director IDs, last 2 years of audited financials, and expected transaction profile. Enhanced due diligence may be required for high-risk jurisdictions.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can you structure instruments for commodity deals specifically?</summary>
+            <p>Yes — our trade finance desk specializes in commodity-linked instruments. We're experienced with letters of credit for sugar, poultry, soy, and energy products, including GACC-certified and FDA-compliant flows.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Empower your capital growth.</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">Partner with ABOGLOBE for secure financial instruments and strategic investment pathways in global trade.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="btn btn-gold text-lg">Speak to an Advisor</a>
+          <a href="vendor-portal.html" class="btn btn-ghost-light text-lg">Client Login</a>
+        </div>
+        <p class="text-xs text-brand-cream/40 mt-8">All inquiries are handled confidentially. Instruments are subject to KYC/AML review and bank approval.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="login.html" class="hover:text-brand-gold transition-colors">Vendor Login</a></li>
+          <li><a href="signup.html" class="hover:text-brand-gold transition-colors">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

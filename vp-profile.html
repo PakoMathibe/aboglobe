@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | Vendor Portal — ABOGLOBE</title>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body class="vendor-body">
+
+  <div class="vp-layout">
+
+    <aside class="vp-sidebar" id="vp-sidebar" aria-label="Vendor portal navigation">
+      <div class="vp-sidebar-brand">
+        <img src="images/logo.png" alt="ABOGLOBE" />
+        <span>Vendor Portal</span>
+      </div>
+
+      <nav>
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Overview</p>
+          <a href="vendor-portal.html" class="vp-nav-link">
+            <i class="lni lni-dashboard" aria-hidden="true"></i> Dashboard
+          </a>
+          <a href="vp-shipments.html" class="vp-nav-link">
+            <i class="lni lni-ship" aria-hidden="true"></i> Shipments
+          </a>
+          <a href="vp-orders.html" class="vp-nav-link">
+            <i class="lni lni-cart" aria-hidden="true"></i> Orders
+          </a>
+        </div>
+
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Operations</p>
+          <a href="vp-documents.html" class="vp-nav-link">
+            <i class="lni lni-file" aria-hidden="true"></i> Documents
+          </a>
+          <a href="vp-invoices.html" class="vp-nav-link">
+            <i class="lni lni-wallet" aria-hidden="true"></i> Invoices
+          </a>
+          <a href="#" class="vp-nav-link" data-inventory>
+            <i class="lni lni-package" aria-hidden="true"></i> Inventory
+          </a>
+        </div>
+
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Account</p>
+          <a href="vp-profile.html" class="vp-nav-link">
+            <i class="lni lni-user" aria-hidden="true"></i> Profile
+          </a>
+          <a href="vp-settings.html" class="vp-nav-link">
+            <i class="lni lni-cog" aria-hidden="true"></i> Settings
+          </a>
+        </div>
+      </nav>
+
+      <div class="vp-sidebar-footer">
+        <div class="vp-user-mini">
+          <div class="vp-user-avatar">JD</div>
+          <div class="vp-user-meta">
+            <strong>John Doe</strong>
+            <span>Acme Trading Co.</span>
+          </div>
+        </div>
+        <a href="login.html" class="vp-nav-link" style="margin-top:.5rem;">
+          <i class="lni lni-exit" aria-hidden="true"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <div class="vp-main">
+      <div class="vp-topbar">
+        <div style="display:flex;align-items:center;gap:.75rem;">
+          <button id="vp-menu-toggle" class="vp-topbar-btn" aria-label="Toggle sidebar" style="display:none;">
+            <i class="lni lni-menu" aria-hidden="true"></i>
+          </button>
+          <h1>Profile</h1>
+        </div>
+        <div class="vp-topbar-right">
+          <div style="position:relative;">
+            <button class="vp-topbar-btn" aria-label="Notifications" data-notif-toggle>
+              <i class="lni lni-bell" aria-hidden="true"></i>
+              <span class="vp-badge-count">3</span>
+            </button>
+            <div class="vp-notif-dropdown"></div>
+          </div>
+          <button class="vp-topbar-btn" aria-label="Messages" data-messages>
+            <i class="lni lni-envelope" aria-hidden="true"></i>
+          </button>
+          <a href="index.html" class="vp-btn vp-btn-outline" style="font-size:.75rem;">
+            <i class="lni lni-home" aria-hidden="true"></i> Main Site
+          </a>
+        </div>
+      </div>
+
+      <main class="vp-content">
+        <div class="vp-page-header">
+          <h2>Company profile</h2>
+          <p>Your registered details on file with ABOGLOBE.</p>
+        </div>
+
+        <div class="vp-form-card">
+          <form id="vp-profile-form" novalidate>
+
+            <div class="vp-form-section">
+              <h3>Company information</h3>
+              <div class="vp-form-grid">
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-company">Company name</label>
+                  <input type="text" id="p-company" name="company" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-reg">Registration #</label>
+                  <input type="text" id="p-reg" name="reg" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-type">Business type</label>
+                  <select id="p-type" name="type" class="vp-form-select">
+                    <option value="buyer">Buyer / Procurement</option>
+                    <option value="supplier">Supplier / Vendor</option>
+                    <option value="logistics">Logistics Partner</option>
+                    <option value="finance">Finance / Banking</option>
+                  </select>
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-industry">Industry</label>
+                  <input type="text" id="p-industry" name="industry" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-country">Country</label>
+                  <input type="text" id="p-country" name="country" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-city">City</label>
+                  <input type="text" id="p-city" name="city" class="vp-form-input" />
+                </div>
+              </div>
+            </div>
+
+            <div class="vp-form-section">
+              <h3>Primary contact</h3>
+              <div class="vp-form-grid">
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-fname">First name</label>
+                  <input type="text" id="p-fname" name="firstName" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-lname">Last name</label>
+                  <input type="text" id="p-lname" name="lastName" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-email">Email</label>
+                  <input type="email" id="p-email" name="email" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-phone">Phone</label>
+                  <input type="tel" id="p-phone" name="phone" class="vp-form-input" />
+                </div>
+              </div>
+            </div>
+
+            <div class="vp-form-section">
+              <h3>Banking details</h3>
+              <div class="vp-form-grid">
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-bank">Bank name</label>
+                  <input type="text" id="p-bank" name="bank" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-swift">SWIFT / BIC</label>
+                  <input type="text" id="p-swift" name="swift" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-acct">Account number</label>
+                  <input type="text" id="p-acct" name="account" class="vp-form-input" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="p-currency">Currency</label>
+                  <select id="p-currency" name="currency" class="vp-form-select">
+                    <option value="USD">USD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CNY">CNY</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="vp-form-actions">
+              <button type="reset" class="vp-btn vp-btn-outline">Reset</button>
+              <button type="submit" class="vp-btn vp-btn-gold">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="vp-toast" class="vp-toast"></div>
+  <script src="js/vendor-portal.js"></script>
+</body>
+</html>

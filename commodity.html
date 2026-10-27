@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Commodity Trading &amp; Supply | ABOGLOBE International INC</title>
+  <meta name="description" content="Premium commodity trading — ICUMSA 45 sugar, Brazilian chicken, soybean products, and energy resources (EN590, D6, LNG). Sourced globally, shipped with full compliance and traceability." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Commodity Trading &amp; Supply — ABOGLOBE International INC" />
+  <meta property="og:description" content="ICUMSA 45 sugar, Brazilian poultry, soy, and energy products — sourced globally, shipped with full compliance and traceability." />
+  <meta property="og:image" content="images/hero-container-ship.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { dark:'#2a1a11', mid:'#5e3f28', light:'#8b6846', gold:'#b88a4a', goldlight:'#d4af6a', cream:'#fdfbf7', creamdark:'#f4ebd9' } },
+      fontFamily: { sans:['Inter','sans-serif'], serif:['Inter','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <div id="preloader" aria-hidden="true"><div class="preloader-mark"></div><div class="preloader-text">ABOGLOBE</div></div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg mt-2">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Commodity Trading</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Bulk commodities, <span class="text-gradient">delivered worldwide.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              Premium sugar, poultry, soy, and energy products — sourced from Brazil and Asia, shipped with full compliance and traceability to markets worldwide.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-8">
+              <a href="contact.html" class="btn btn-primary">
+                Request a Quote <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-6 pt-8 text-xs text-brand-mid/60">
+              <div class="flex items-center gap-2"><i class="lni lni-ship text-brand-gold" aria-hidden="true"></i> Brazil · Asia · Middle East</div>
+              <div class="flex items-center gap-2"><i class="lni lni-checkmark-circle text-brand-gold" aria-hidden="true"></i> GACC · ISO 22000</div>
+              <div class="flex items-center gap-2"><i class="lni lni-shield text-brand-gold" aria-hidden="true"></i> Full traceability</div>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/hero-container-ship.jpg"
+                   alt="Container ship loaded with agricultural commodities at golden hour"
+                   width="600" height="450" fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-ship&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">In stock</span>
+                <span class="hero-image-badge-value">Q4 2025</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker-strip relative" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item"><span class="dot"></span><span>OTG</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>DDP</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>FOB</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>CIF</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>ICUMSA 45 Sugar</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>Brazilian Chicken</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>EN590 · D6 · LNG</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>OTG</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>DDP</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>FOB</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>CIF</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>ICUMSA 45 Sugar</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>Brazilian Chicken</span></div>
+        <div class="ticker-item"><span class="dot"></span><span>EN590 · D6 · LNG</span></div>
+      </div>
+    </div>
+
+    <!-- ============ STATS BAR ============ -->
+    <section aria-label="Key figures" class="px-6 relative z-30 -mt-8">
+      <div class="stats-strip reveal">
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="850" data-suffix="K+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">MT Shipped</p>
+        </div>
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="12" data-suffix="+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Origin Countries</p>
+        </div>
+        <div class="p-10 text-center">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="99" data-suffix="%">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">On-Time Delivery</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ABOGLOBE COMMODITIES ============ -->
+    <section class="py-24 bg-white" aria-labelledby="why-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Why ABOGLOBE</span>
+          <h2 id="why-heading" class="text-4xl md:text-5xl mb-4">Built for procurement teams.</h2>
+          <p class="text-lg text-brand-mid/70">Trusted relationships, transparent specs, and reliable logistics — from origin to your warehouse.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <article class="cert-detail-card reveal">
+            <div class="cert-detail-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Direct origin</h3>
+            <p class="cert-detail-body">Direct relationships with BRF, RaziEn, and certified producers — no middlemen, no surprises.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-100">
+            <div class="cert-detail-icon"><i class="lni lni-checkmark-circle" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Full certification</h3>
+            <p class="cert-detail-body">GACC, ISO 22000, HACCP, and Halal — every shipment arrives with a complete certificate pack.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-200">
+            <div class="cert-detail-icon"><i class="lni lni-shield" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Fully traceable</h3>
+            <p class="cert-detail-body">Lot-level traceability from production facility to your delivery point — audit-ready on request.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-300">
+            <div class="cert-detail-icon"><i class="lni lni-world" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">Flexible logistics</h3>
+            <p class="cert-detail-body">OTG, DDP, FOB, or CIF — we structure shipping around your operations, not ours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio" class="py-32 bg-brand-creamdark" aria-labelledby="portfolio-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Portfolio</span>
+          <h2 id="portfolio-heading" class="text-4xl md:text-5xl mb-4">Our trading commodities.</h2>
+          <p class="text-brand-mid/70">High-demand products sourced from world-class manufacturers.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Sugar — reuses featured-sugar -->
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img src="images/featured-sugar.jpg"
+                   alt="ICUMSA 45 refined sugar in a wooden scoop"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-cup&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> GACC Certified for China
+              </div>
+              <h3 class="text-2xl mb-3">ICUMSA 45 Refined Sugar</h3>
+              <p class="text-brand-mid/70 leading-relaxed mb-4">Sourced from BRF and RaziEn, our ICUMSA 45 and raw sugar products are recognized for superior quality and international compliance.</p>
+              <div class="product-specs">
+                <div><span class="spec-label">Min Order</span><span class="spec-value">12,500 MT</span></div>
+                <div><span class="spec-label">Terms</span><span class="spec-value">CIF / FOB</span></div>
+                <div><span class="spec-label">Origin</span><span class="spec-value">Brazil</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Chicken — reuses case-poultry -->
+          <article class="product-card reveal delay-100">
+            <div class="product-image">
+              <img src="images/case-poultry.jpg"
+                   alt="Premium frozen chicken packaging from Brazil"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#a8895c,#6b4a2f)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-dinner&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> Global Food Safety
+              </div>
+              <h3 class="text-2xl mb-3">Premium Brazilian Chicken</h3>
+              <p class="text-brand-mid/70 leading-relaxed mb-4">Top-quality poultry from certified Brazilian producers — known for tenderness and flavour, meeting the highest food-safety standards.</p>
+              <div class="product-specs">
+                <div><span class="spec-label">Min Order</span><span class="spec-value">4 containers</span></div>
+                <div><span class="spec-label">Terms</span><span class="spec-value">DDP / FOB</span></div>
+                <div><span class="spec-label">Origin</span><span class="spec-value">Brazil</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Soy -->
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img src="images/product-soy.jpg"
+                   alt="Soybean products and derivatives"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#88b8a4,#3b6b5a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-leaf&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> Sustainable Sourcing
+              </div>
+              <h3 class="text-2xl mb-3">Soybean Products</h3>
+              <p class="text-brand-mid/70 leading-relaxed mb-4">Soybean oil, meal, and protein-rich derivatives from reputable global partners — reflecting our commitment to nutritional quality and sustainability.</p>
+              <div class="product-specs">
+                <div><span class="spec-label">Min Order</span><span class="spec-value">Per contract</span></div>
+                <div><span class="spec-label">Terms</span><span class="spec-value">FOB / CIF</span></div>
+                <div><span class="spec-label">Origin</span><span class="spec-value">Brazil / US</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Energy -->
+          <article class="product-card reveal delay-100">
+            <div class="product-image">
+              <img src="images/product-energy.jpg"
+                   alt="Energy products — diesel, fuel oil, LNG"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-bolt&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-10">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-4">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> Energy Grade
+              </div>
+              <h3 class="text-2xl mb-3">Energy Products</h3>
+              <p class="text-brand-mid/70 leading-relaxed mb-4">Key energy resources — EN590, D6, and LNG — essential to global industries and transportation. Efficient logistics and secure storage ensure consistent supply.</p>
+              <div class="product-specs">
+                <div><span class="spec-label">Min Order</span><span class="spec-value">Per contract</span></div>
+                <div><span class="spec-label">Terms</span><span class="spec-value">CIF / FOB</span></div>
+                <div><span class="spec-label">Origin</span><span class="spec-value">Global</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED COMMODITY SPOTLIGHT ============ -->
+    <section class="py-32 bg-brand-dark relative overflow-hidden" aria-labelledby="featured-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 reveal-left">
+          <span class="text-xs font-bold text-brand-goldlight uppercase tracking-[0.3em] mb-4 block">Featured Commodity</span>
+          <h2 id="featured-heading" class="text-white mb-6 leading-tight">
+            ICUMSA 45 <span class="text-brand-goldlight">Refined Sugar</span>
+          </h2>
+          <p class="text-lg text-brand-cream/70 leading-relaxed mb-8 max-w-xl">
+            Brazil-sourced, GACC-certified, ready for export to China and Southeast Asia. Consistent 45 IU colour, food-grade purity, full lot-level traceability from refinery to your warehouse.
+          </p>
+
+          <div class="grid grid-cols-3 gap-6 mb-10 max-w-lg">
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">45 IU</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Colour</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">GACC</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Certified</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">CIF/FOB</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Terms</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn btn-gold">Request a Quote <i class="lni lni-arrow-right" aria-hidden="true"></i></a>
+            <a href="#portfolio" class="btn btn-ghost-light">View All Commodities</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 reveal-right">
+          <div class="spotlight-card">
+            <div class="spotlight-image spotlight-image--photo">
+              <img src="images/featured-sugar.jpg"
+                   alt="Brazilian ICUMSA 45 refined sugar"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-cup&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="spotlight-body">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">In Stock · Q4 2025</p>
+              <h4 class="font-bold mb-1">Brazilian White Sugar</h4>
+              <p class="text-sm text-brand-mid/70">Min 12,500 MT · Container or bulk</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRADE TERMS ============ -->
+    <section class="py-32 bg-white" aria-labelledby="terms-heading">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Trade Terms</span>
+          <h2 id="terms-heading" class="text-4xl md:text-5xl mb-6">Flexible transaction terms.</h2>
+          <p class="text-lg text-brand-mid/70 leading-relaxed mb-8">To meet the diverse needs of our clients, we offer flexible shipping and transaction terms — tailored for reliability and cost-efficiency.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="term-badge">
+              <i class="lni lni-checkmark-circle" aria-hidden="true"></i>
+              <div><strong>OTG</strong><span>On-The-Ground · buyer-arranged freight</span></div>
+            </div>
+            <div class="term-badge">
+              <i class="lni lni-checkmark-circle" aria-hidden="true"></i>
+              <div><strong>DDP</strong><span>Delivered Duty Paid · turnkey door-to-door</span></div>
+            </div>
+            <div class="term-badge">
+              <i class="lni lni-checkmark-circle" aria-hidden="true"></i>
+              <div><strong>FOB</strong><span>Free On Board · buyer assumes from load port</span></div>
+            </div>
+            <div class="term-badge">
+              <i class="lni lni-checkmark-circle" aria-hidden="true"></i>
+              <div><strong>CIF</strong><span>Cost, Insurance, Freight · we cover to destination</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 reveal-right">
+          <figure class="image-card">
+            <div class="image-placeholder image-placeholder--photo">
+              <img src="images/commodity-warehouse.jpg"
+                   alt="Food-grade commodity warehouse with stacked pallets"
+                   width="600" height="380" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-warehouse&quot; aria-hidden=&quot;true&quot; style=&quot;font-size:5rem;&quot;></i>')" />
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="py-24 bg-brand-creamdark" aria-labelledby="certs-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center mb-12 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Certifications</span>
+          <h2 id="certs-heading" class="text-3xl md:text-4xl mb-4">Fully certified supply chains.</h2>
+          <p class="text-brand-mid/70">Every shipment arrives with a complete certificate pack — audit-ready on arrival.</p>
+        </header>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+          <div class="cert-badge">
+            <i class="lni lni-shield" aria-hidden="true"></i>
+            <strong>GACC</strong>
+            <span>China certified</span>
+          </div>
+          <div class="cert-badge">
+            <i class="lni lni-checkmark-circle" aria-hidden="true"></i>
+            <strong>ISO 22000</strong>
+            <span>Food safety</span>
+          </div>
+          <div class="cert-badge">
+            <i class="lni lni-world" aria-hidden="true"></i>
+            <strong>HACCP</strong>
+            <span>Hazard control</span>
+          </div>
+          <div class="cert-badge">
+            <i class="lni lni-certificate-badge-1" aria-hidden="true"></i>
+            <strong>Halal</strong>
+            <span>Compliant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASE STUDIES ============ -->
+    <section class="py-32 bg-white" aria-labelledby="case-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Recent Shipments</span>
+          <h2 id="case-heading" class="text-4xl md:text-5xl mb-4">Selected engagements.</h2>
+          <p class="text-lg text-brand-mid/70">Real trades we've executed across sugar, poultry, and energy.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="case-card fintech-card reveal">
+            <div class="case-image case-image--photo">
+              <img src="images/case-sugar.jpg" alt="ICUMSA 45 sugar shipment" width="400" height="170" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-cup&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Commodity · Brazil → China</p>
+              <h3 class="text-lg mb-3">12,500 MT ICUMSA 45 Sugar</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">GACC-certified shipment delivered CIF Shanghai within 45 days of contract. Full lot-level traceability to refinery.</p>
+            </div>
+          </article>
+
+          <article class="case-card fintech-card reveal delay-100">
+            <div class="case-image case-image--photo">
+              <img src="images/case-poultry.jpg" alt="Frozen chicken shipment" width="400" height="170" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#a8895c,#6b4a2f)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-dinner&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Commodity · Brazil → Middle East</p>
+              <h3 class="text-lg mb-3">8,000 MT Frozen Chicken</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">BRF-sourced poultry, DDP delivery to Dubai, cold-chain verified end-to-end.</p>
+            </div>
+          </article>
+
+          <!-- Energy — reuses hero-container-ship -->
+          <article class="case-card fintech-card reveal delay-200">
+            <div class="case-image case-image--photo">
+              <img src="images/hero-container-ship.jpg" alt="Energy shipment — diesel and fuel oil" width="400" height="170" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-bolt&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Commodity · Global → Asia</p>
+              <h3 class="text-lg mb-3">25,000 MT EN590 Diesel</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">CIF delivery to Southeast Asia with full ISO and origin documentation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <header class="text-center mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Questions</span>
+          <h2 id="faq-heading" class="text-4xl md:text-5xl mb-6">Procurement FAQs.</h2>
+          <p class="text-lg text-brand-mid/70">Common questions from procurement and trading teams.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>What's the minimum order quantity?</summary>
+            <p>ICUMSA 45 sugar typically starts at 12,500 MT. Frozen poultry starts at 4–6 containers. Energy contracts are structured per product and destination — EN590 usually starts at 25,000 MT. Soy and smaller-volume products can be quoted per contract.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which certifications do you provide?</summary>
+            <p>Every shipment carries GACC (for China), ISO 22000 (food safety), HACCP (hazard control), and Halal certificates as required — plus origin certificates, phytosanitary certificates, and lot-level traceability documents.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What are typical lead times?</summary>
+            <p>From confirmed contract to delivery, 30–60 days depending on origin, destination, and shipping route. Cold-chain and time-sensitive cargo may be expedited to 21–30 days.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do you handle quality assurance?</summary>
+            <p>Every lot is inspected at origin by our QC partners before loading. We provide inspection reports (SGS or equivalent), and offer third-party inspection at destination on request.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can you handle end-to-end logistics (DDP)?</summary>
+            <p>Yes — DDP is one of our core delivery structures. We handle ocean freight, port handling, customs clearance, duties, and final-mile delivery to your warehouse.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Looking for reliable commodity supply?</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">With unwavering commitment to integrity, quality, and client satisfaction, ABOGLOBE is a leading player in global commodity trading.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="btn btn-gold text-lg">Contact Our Trading Desk</a>
+          <a href="vendor-portal.html" class="btn btn-ghost-light text-lg">Client Login</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="login.html" class="hover:text-brand-gold transition-colors">Vendor Login</a></li>
+          <li><a href="signup.html" class="hover:text-brand-gold transition-colors">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

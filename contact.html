@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | ABOGLOBE International INC</title>
+  <meta name="description" content="Contact ABOGLOBE International INC — global trade, financial instruments, and certified medical supplies. We respond to every inquiry within 24 business hours." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact ABOGLOBE International INC" />
+  <meta property="og:description" content="Speak with our trade, finance, real estate, or medical supply desks. Response within 24 business hours." />
+  <meta property="og:image" content="images/contact-hq.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { dark:'#2a1a11', mid:'#5e3f28', light:'#8b6846', gold:'#b88a4a', goldlight:'#d4af6a', cream:'#fdfbf7', creamdark:'#f4ebd9' } },
+      fontFamily: { sans:['Inter','sans-serif'], serif:['Playfair Display','serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <div id="preloader" aria-hidden="true"><div class="preloader-mark"></div><div class="preloader-text">ABOGLOBE</div></div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg mt-2">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Contact Us</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Let's talk <span class="text-gradient font-serif italic">global trade.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              Reach out for commodity inquiries, financial instruments, or certified medical supply procurement. Every inquiry gets a response within 24 business hours.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-6 pt-8 text-xs text-brand-mid/60">
+              <div class="flex items-center gap-2"><i class="lni lni-timer text-brand-gold" aria-hidden="true"></i> 24h response time</div>
+              <div class="flex items-center gap-2"><i class="lni lni-lock text-brand-gold" aria-hidden="true"></i> Confidential by default</div>
+              <div class="flex items-center gap-2"><i class="lni lni-world text-brand-gold" aria-hidden="true"></i> Global coverage</div>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/contact-hq.jpg"
+                   alt="ABOGLOBE headquarters lobby in Richmond, British Columbia"
+                   width="600" height="450" fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-map-marker&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">Richmond, BC</span>
+                <span class="hero-image-badge-value">Vancouver HQ</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESPONSE PROMISE STRIP ============ -->
+    <section aria-label="Response commitment" class="py-8 bg-white border-b border-brand-mid/5">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        <div class="promise-card">
+          <i class="lni lni-timer" aria-hidden="true"></i>
+          <div>
+            <strong>Response within 24 hours</strong>
+            <span>Every inquiry answered by a real advisor — not a bot — on business days.</span>
+          </div>
+        </div>
+        <div class="promise-card">
+          <i class="lni lni-shield" aria-hidden="true"></i>
+          <div>
+            <strong>Confidential handling</strong>
+            <span>All communications treated as commercially sensitive. NDA on request.</span>
+          </div>
+        </div>
+        <div class="promise-card">
+          <i class="lni lni-user" aria-hidden="true"></i>
+          <div>
+            <strong>Direct to the right desk</strong>
+            <span>Your inquiry goes straight to the division best suited to help — no bouncing.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPARTMENT ROUTING CARDS ============ -->
+    <section class="py-24 bg-white" aria-labelledby="departments-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Choose Your Desk</span>
+          <h2 id="departments-heading" class="text-4xl md:text-5xl mb-4">Talk to the right team.</h2>
+          <p class="text-lg text-brand-mid/70">Select the division that matches your inquiry — your message routes straight to the right specialist.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <a href="#contact-form" class="department-card reveal" data-dept="commodity">
+            <i class="lni lni-ship" aria-hidden="true"></i>
+            <strong>Commodity</strong>
+            <span>Sugar, poultry, soy, energy</span>
+          </a>
+          <a href="#contact-form" class="department-card reveal delay-100" data-dept="investment">
+            <i class="lni lni-investment" aria-hidden="true"></i>
+            <strong>Investment</strong>
+            <span>DLC, SBLC, BG, structured</span>
+          </a>
+          <a href="#contact-form" class="department-card reveal delay-200" data-dept="medical">
+            <i class="lni lni-heart-monitor" aria-hidden="true"></i>
+            <strong>Medical &amp; PPE</strong>
+            <span>3M, Cranberry, Cardinal</span>
+          </a>
+          <a href="#contact-form" class="department-card reveal delay-300" data-dept="real-estate">
+            <i class="lni lni-apartment" aria-hidden="true"></i>
+            <strong>Real Estate</strong>
+            <span>Vancouver projects</span>
+          </a>
+          <a href="#contact-form" class="department-card reveal delay-400" data-dept="general">
+            <i class="lni lni-question-mark-circle" aria-hidden="true"></i>
+            <strong>General</strong>
+            <span>Everything else</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT GRID ============ -->
+    <section id="contact-form" class="py-24 bg-brand-creamdark" aria-labelledby="form-heading">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+        <!-- SIDEBAR — contact info -->
+        <aside class="lg:col-span-5 reveal" aria-labelledby="sidebar-heading">
+          <div class="bg-white p-10 rounded-[2rem] border border-brand-mid/10 h-full shadow-sm">
+            <h2 id="sidebar-heading" class="text-3xl mb-6">Get in touch.</h2>
+            <p class="text-brand-mid/70 mb-10 leading-relaxed">Direct lines to our team. Or use the form on the right — your choice.</p>
+
+            <ul class="space-y-6">
+              <li class="contact-line">
+                <div class="contact-line-icon"><i class="lni lni-map-marker" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Headquarters</strong>
+                  <a href="https://maps.google.com/?q=Suite+305+5811+Cooney+Rd+Richmond+BC" target="_blank" rel="noopener">
+                    Suite 305, 5811 Cooney Rd.<br/>Richmond BC, Canada V6X3M1
+                  </a>
+                </div>
+              </li>
+              <li class="contact-line">
+                <div class="contact-line-icon"><i class="lni lni-phone" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+17787443806">778-744-3806</a>
+                </div>
+              </li>
+              <li class="contact-line">
+                <div class="contact-line-icon"><i class="lni lni-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:drli@aboglobe.com">drli@aboglobe.com</a>
+                </div>
+              </li>
+              <li class="contact-line">
+                <div class="contact-line-icon"><i class="lni lni-whatsapp" aria-hidden="true"></i></div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/17787443806" target="_blank" rel="noopener">+1 778 744 3806</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-10 pt-8 border-t border-brand-mid/10">
+              <h4 class="text-sm font-bold uppercase tracking-widest mb-4 font-sans">Follow us</h4>
+              <div class="flex gap-3">
+                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="lni lni-linkedin-original" aria-hidden="true"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="lni lni-twitter-original" aria-hidden="true"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="lni lni-instagram-original" aria-hidden="true"></i></a>
+              </div>
+            </div>
+
+            <!-- Emergency strip -->
+            <div class="urgent-box">
+              <div class="urgent-icon"><i class="lni lni-bolt" aria-hidden="true"></i></div>
+              <div>
+                <strong>Urgent shipment?</strong>
+                <p>For time-critical medical or commodity shipments, call <a href="tel:+17787443806">778-744-3806</a> and ask for the on-call duty officer.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- FORM -->
+        <div class="lg:col-span-7 reveal delay-200">
+          <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-brand-mid/5">
+            <h2 id="form-heading" class="text-3xl mb-3">Send us a message.</h2>
+            <p class="text-brand-mid/70 text-sm mb-8">Fields marked with <span class="text-brand-gold">*</span> are required.</p>
+
+            <form id="contact-form-el" novalidate>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label for="name" class="block text-sm font-bold mb-2">Full name <span class="text-brand-gold">*</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name"
+                         placeholder="John Doe"
+                         class="form-input" aria-describedby="name-error" />
+                  <p class="form-error" id="name-error" role="alert"></p>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-bold mb-2">Work email <span class="text-brand-gold">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email"
+                         placeholder="john@company.com"
+                         class="form-input" aria-describedby="email-error" />
+                  <p class="form-error" id="email-error" role="alert"></p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label for="company" class="block text-sm font-bold mb-2">Company</label>
+                  <input type="text" id="company" name="company" autocomplete="organization"
+                         placeholder="Acme Trading Co."
+                         class="form-input" />
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-bold mb-2">Phone</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel"
+                         placeholder="+1 778 000 0000"
+                         class="form-input" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                <div>
+                  <label for="department" class="block text-sm font-bold mb-2">Department <span class="text-brand-gold">*</span></label>
+                  <select id="department" name="department" required class="form-input" aria-describedby="department-error">
+                    <option value="">Select a department</option>
+                    <option value="commodity">Commodity Trading</option>
+                    <option value="investment">Financial Investment</option>
+                    <option value="medical">Medical &amp; PPE</option>
+                    <option value="real-estate">Real Estate</option>
+                    <option value="general">General / Other</option>
+                  </select>
+                  <p class="form-error" id="department-error" role="alert"></p>
+                </div>
+                <div>
+                  <label for="volume" class="block text-sm font-bold mb-2">Estimated quantity</label>
+                  <input type="text" id="volume" name="volume"
+                         placeholder="e.g. 12,500 MT / 4 containers"
+                         class="form-input" />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label for="message" class="block text-sm font-bold mb-2">Message <span class="text-brand-gold">*</span></label>
+                <textarea id="message" name="message" required rows="5"
+                          placeholder="Tell us about your requirement, timeline, and destination."
+                          class="form-input resize-none" aria-describedby="message-error"></textarea>
+                <p class="form-error" id="message-error" role="alert"></p>
+              </div>
+
+              <label for="nda" class="flex items-start gap-3 mb-6 cursor-pointer">
+                <input type="checkbox" id="nda" name="nda" class="w-4 h-4 mt-0.5 rounded border-brand-mid/20 text-brand-gold focus:ring-brand-gold/30" />
+                <span class="text-xs text-brand-mid/80 leading-relaxed">I'd like to request a mutual NDA before detailed discussions.</span>
+              </label>
+
+              <button type="submit" class="w-full btn btn-primary py-4 text-base">
+                Send Message <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </button>
+
+              <p id="form-success" class="hidden mt-4 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg p-4" role="status">
+                <i class="lni lni-checkmark-circle mr-1" aria-hidden="true"></i>
+                Thanks — your message has been sent. We'll respond within 24 business hours.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOK A CALL ============ -->
+    <section class="py-24 bg-white" aria-labelledby="book-heading">
+      <div class="max-w-5xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Prefer a call?</span>
+          <h2 id="book-heading" class="text-4xl md:text-5xl mb-4">Book a 20-minute introduction.</h2>
+          <p class="text-lg text-brand-mid/70">Pick a slot below. Our advisors walk you through our capabilities in a single, no-pressure conversation.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+          <button class="booking-slot" aria-label="Book Tuesday 10:00 AM slot">
+            <span class="booking-day">Tue · 10:00</span>
+            <span class="booking-label">20 min · Commodity desk</span>
+            <span class="booking-cta">Book →</span>
+          </button>
+          <button class="booking-slot" aria-label="Book Wednesday 2:00 PM slot">
+            <span class="booking-day">Wed · 14:00</span>
+            <span class="booking-label">20 min · Investment desk</span>
+            <span class="booking-cta">Book →</span>
+          </button>
+          <button class="booking-slot" aria-label="Book Thursday 11:00 AM slot">
+            <span class="booking-day">Thu · 11:00</span>
+            <span class="booking-label">20 min · General / new partner</span>
+            <span class="booking-cta">Book →</span>
+          </button>
+        </div>
+
+        <p class="text-center text-xs text-brand-mid/50 mt-6">All times Pacific (PT). More slots available — email <a href="mailto:drli@aboglobe.com" class="text-brand-gold hover:underline">drli@aboglobe.com</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ BRANCHES ============ -->
+    <section class="py-24 bg-brand-creamdark" aria-labelledby="branches-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Global Offices</span>
+          <h2 id="branches-heading" class="text-4xl md:text-5xl mb-4">Three continents. One team.</h2>
+          <p class="text-brand-mid/70">Three local desks, coordinated from Vancouver.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+          <article class="branch-card">
+            <div class="branch-flag" aria-hidden="true">🇨🇦</div>
+            <h3 class="branch-title">Vancouver · HQ</h3>
+            <p class="branch-address">Suite 305 – 5811 Cooney Rd, Richmond BC, Canada V6X3M1</p>
+            <div class="branch-meta"><i class="lni lni-phone" aria-hidden="true"></i> 778-744-3806</div>
+          </article>
+          <article class="branch-card">
+            <div class="branch-flag" aria-hidden="true">🇧🇷</div>
+            <h3 class="branch-title">São Paulo · ABOGLOBE Brazil</h3>
+            <p class="branch-address">Ed. São Luiz Center, Av. Paulista 2.300, São Paulo, 01310-300</p>
+            <div class="branch-meta"><i class="lni lni-map-marker" aria-hidden="true"></i> Paulista Consolação</div>
+          </article>
+          <article class="branch-card">
+            <div class="branch-flag" aria-hidden="true">🇨🇳</div>
+            <h3 class="branch-title">Hainan · ABOGLOBE China</h3>
+            <p class="branch-address">Hainan, China · Deng Yufei, CEO</p>
+            <div class="branch-meta"><i class="lni lni-user" aria-hidden="true"></i> Regional Director</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-24 bg-white" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <header class="text-center mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Questions</span>
+          <h2 id="faq-heading" class="text-4xl md:text-5xl mb-4">Common questions.</h2>
+        </header>
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>What's the fastest way to reach your team?</summary>
+            <p>Call us at <strong>778-744-3806</strong>, email <strong>drli@aboglobe.com</strong>, or use the form above — we respond within 24 business hours. For urgent shipments, ask for the on-call duty officer.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you handle international shipping?</summary>
+            <p>Yes — we support <strong>OTG, DDP, FOB, and CIF</strong> terms across all our commodity, medical, and PPE product lines. DDP means we handle delivery to your warehouse door.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I request samples?</summary>
+            <p>Yes — sample shipments are available for qualified buyers on commodity, medical, and PPE product lines. Contact our trading desk for details and sample terms.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where can I find product documentation?</summary>
+            <p>All shipments include full certificate packs (GACC, ISO 22000, HACCP, Halal, FDA 510K, CE, ISO 13485 as applicable). For pre-purchase documentation, contact our team directly.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you sign NDAs?</summary>
+            <p>Yes — mutual NDAs are standard for detailed commodity, investment, and pricing discussions. Tick the NDA checkbox on the form or ask your advisor.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Prefer to talk directly?</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">Call our Vancouver headquarters to speak with a trade specialist right now.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="tel:+17787443806" class="btn btn-gold text-lg">
+            <i class="lni lni-phone" aria-hidden="true"></i> 778-744-3806
+          </a>
+          <a href="mailto:drli@aboglobe.com" class="btn btn-ghost-light text-lg">
+            <i class="lni lni-envelope" aria-hidden="true"></i> Email us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="login.html" class="hover:text-brand-gold transition-colors">Vendor Login</a></li>
+          <li><a href="signup.html" class="hover:text-brand-gold transition-colors">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+
+  <!-- ===== CONTACT FORM + DEPARTMENT ROUTING (page-specific) ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form-el');
+      const successMsg = document.getElementById('form-success');
+      if (!form) return;
+
+      // Department cards → auto-select + scroll to form
+      document.querySelectorAll('.department-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const dept = card.dataset.dept;
+          const select = document.getElementById('department');
+          if (select && dept) select.value = dept;
+        });
+      });
+
+      // Client-side validation
+      const setError = (id, msg) => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + '-error');
+        if (!input || !error) return;
+        if (msg) {
+          input.classList.add('border-red-400', 'ring-2', 'ring-red-100');
+          input.setAttribute('aria-invalid', 'true');
+          error.textContent = msg;
+        } else {
+          input.classList.remove('border-red-400', 'ring-2', 'ring-red-100');
+          input.removeAttribute('aria-invalid');
+          error.textContent = '';
+        }
+      };
+
+      // Live-clear errors on input
+      ['name', 'email', 'department', 'message'].forEach(id => {
+        const input = document.getElementById(id);
+        if (!input) return;
+        input.addEventListener('input', () => setError(id, ''));
+        input.addEventListener('change', () => setError(id, ''));
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const department = document.getElementById('department').value;
+        const message = document.getElementById('message').value.trim();
+
+        if (!name) { setError('name', 'Please enter your name.'); valid = false; }
+        if (!email) { setError('email', 'Please enter your email address.'); valid = false; }
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          setError('email', 'Please enter a valid email address.'); valid = false;
+        }
+        if (!department) { setError('department', 'Please choose a department.'); valid = false; }
+        if (!message || message.length < 10) {
+          setError('message', 'Please write a message (10+ characters).'); valid = false;
+        }
+
+        if (!valid) return;
+
+        // Demo success state
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="lni lni-checkmark-circle" aria-hidden="true"></i> Sending...';
+        setTimeout(() => {
+          successMsg.classList.remove('hidden');
+          form.reset();
+          btn.disabled = false;
+          btn.innerHTML = 'Send Message <i class="lni lni-arrow-right" aria-hidden="true"></i>';
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 800);
+      });
+
+      // Booking slot demo
+      document.querySelectorAll('.booking-slot').forEach(slot => {
+        slot.addEventListener('click', () => {
+          slot.classList.add('booking-slot--selected');
+          const label = slot.querySelector('.booking-day')?.textContent || '';
+          const cta = slot.querySelector('.booking-cta');
+          if (cta) cta.textContent = 'Selected ✓';
+          // Scroll to form and prefill message
+          const msg = document.getElementById('message');
+          const dept = document.getElementById('department');
+          if (msg && !msg.value) {
+            msg.value = `I'd like to book the ${label} (PT) introduction slot.`;
+          }
+          if (dept && !dept.value) dept.value = 'general';
+          document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

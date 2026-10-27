@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | ABOGLOBE International INC</title>
+  <meta name="description" content="Register for the ABOGLOBE vendor portal to manage trade orders, shipments, and documentation." />
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body class="auth-body bg-brand-cream text-brand-dark">
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-mark"></div>
+    <div class="preloader-text">ABOGLOBE</div>
+  </div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <nav class="auth-nav" aria-label="Authentication">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-12 w-auto" width="48" height="48" />
+      </a>
+      <a href="login.html" class="btn btn-outline text-sm">Sign In</a>
+    </div>
+  </nav>
+
+  <main class="auth-main">
+    <div class="auth-wrap auth-wrap--wide">
+
+      <div class="auth-header">
+        <div class="auth-icon" aria-hidden="true">
+          <i class="lni lni-user"></i>
+        </div>
+        <h1 class="auth-title">Create your account</h1>
+        <p class="auth-subtitle">Access the ABOGLOBE vendor portal in minutes</p>
+      </div>
+
+      <!-- Progress -->
+      <div class="auth-progress" aria-label="Signup progress">
+        <div class="auth-progress-step is-active"></div>
+        <div class="auth-progress-step"></div>
+        <div class="auth-progress-step"></div>
+      </div>
+
+      <div class="auth-card">
+        <form id="signup-form" novalidate>
+
+          <!-- First / Last name -->
+          <div class="auth-grid-2">
+            <div>
+              <label for="first-name" class="auth-label">First name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                required
+                autocomplete="given-name"
+                placeholder="John"
+                class="auth-input"
+              />
+            </div>
+            <div>
+              <label for="last-name" class="auth-label">Last name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                required
+                autocomplete="family-name"
+                placeholder="Doe"
+                class="auth-input"
+              />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="auth-field">
+            <label for="signup-email" class="auth-label">Work email</label>
+            <div class="relative">
+              <i class="lni lni-envelope auth-input-icon" aria-hidden="true"></i>
+              <input
+                type="email"
+                id="signup-email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="john@company.com"
+                class="auth-input auth-input--with-left-icon"
+              />
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div class="auth-field">
+            <label for="company" class="auth-label">Company name</label>
+            <div class="relative">
+              <i class="lni lni-apartment auth-input-icon" aria-hidden="true"></i>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                required
+                autocomplete="organization"
+                placeholder="Acme Trading Co."
+                class="auth-input auth-input--with-left-icon"
+              />
+            </div>
+          </div>
+
+          <!-- Role -->
+          <div class="auth-field">
+            <label for="role" class="auth-label">Your role</label>
+            <select id="role" name="role" required class="auth-input auth-select">
+              <option value="" disabled selected>Select your role</option>
+              <option value="buyer">Buyer / Procurement</option>
+              <option value="supplier">Supplier / Vendor</option>
+              <option value="logistics">Logistics Partner</option>
+              <option value="finance">Finance / Banking</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Password -->
+          <div class="auth-field">
+            <label for="signup-password" class="auth-label">Password</label>
+            <div class="relative">
+              <i class="lni lni-lock auth-input-icon" aria-hidden="true"></i>
+              <input
+                type="password"
+                id="signup-password"
+                name="password"
+                required
+                autocomplete="new-password"
+                placeholder="Min. 8 characters"
+                class="auth-input auth-input--with-left-icon auth-input--with-right-icon"
+              />
+              <button type="button" id="toggle-signup-password" class="auth-input-icon auth-input-icon--right" aria-label="Show password">
+                <i class="lni lni-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- Strength -->
+            <div class="auth-strength" id="pw-strength" data-score="0" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p class="auth-hint" id="pw-hint">Use 8+ characters with a mix of letters, numbers &amp; symbols.</p>
+          </div>
+
+          <!-- Terms -->
+          <div class="auth-checkbox">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="auth-submit auth-submit--gold">
+            Create Account <i class="lni lni-arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <p id="signup-error" class="auth-error hidden" role="alert"></p>
+        </form>
+      </div>
+
+      <p class="auth-footer-link">
+        Already have an account?
+        <a href="login.html">Sign in</a>
+      </p>
+
+      <p class="auth-back-link">
+        <a href="index.html">
+          <i class="lni lni-arrow-left" aria-hidden="true"></i> Back to main site
+        </a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

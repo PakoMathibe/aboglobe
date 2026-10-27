@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orders | Vendor Portal — ABOGLOBE</title>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body class="vendor-body">
+
+  <div class="vp-layout">
+
+    <aside class="vp-sidebar" id="vp-sidebar" aria-label="Vendor portal navigation">
+      <div class="vp-sidebar-brand">
+        <img src="images/logo.png" alt="ABOGLOBE" />
+        <span>Vendor Portal</span>
+      </div>
+
+      <nav>
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Overview</p>
+          <a href="vendor-portal.html" class="vp-nav-link">
+            <i class="lni lni-dashboard" aria-hidden="true"></i> Dashboard
+          </a>
+          <a href="vp-shipments.html" class="vp-nav-link">
+            <i class="lni lni-ship" aria-hidden="true"></i> Shipments
+          </a>
+          <a href="vp-orders.html" class="vp-nav-link">
+            <i class="lni lni-cart" aria-hidden="true"></i> Orders
+          </a>
+        </div>
+
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Operations</p>
+          <a href="vp-documents.html" class="vp-nav-link">
+            <i class="lni lni-file" aria-hidden="true"></i> Documents
+          </a>
+          <a href="vp-invoices.html" class="vp-nav-link">
+            <i class="lni lni-wallet" aria-hidden="true"></i> Invoices
+          </a>
+          <a href="#" class="vp-nav-link" data-inventory>
+            <i class="lni lni-package" aria-hidden="true"></i> Inventory
+          </a>
+        </div>
+
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Account</p>
+          <a href="vp-profile.html" class="vp-nav-link">
+            <i class="lni lni-user" aria-hidden="true"></i> Profile
+          </a>
+          <a href="vp-settings.html" class="vp-nav-link">
+            <i class="lni lni-cog" aria-hidden="true"></i> Settings
+          </a>
+        </div>
+      </nav>
+
+      <div class="vp-sidebar-footer">
+        <div class="vp-user-mini">
+          <div class="vp-user-avatar">JD</div>
+          <div class="vp-user-meta">
+            <strong>John Doe</strong>
+            <span>Acme Trading Co.</span>
+          </div>
+        </div>
+        <a href="login.html" class="vp-nav-link" style="margin-top:.5rem;">
+          <i class="lni lni-exit" aria-hidden="true"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <div class="vp-main">
+      <div class="vp-topbar">
+        <div style="display:flex;align-items:center;gap:.75rem;">
+          <button id="vp-menu-toggle" class="vp-topbar-btn" aria-label="Toggle sidebar" style="display:none;">
+            <i class="lni lni-menu" aria-hidden="true"></i>
+          </button>
+          <h1>Orders</h1>
+        </div>
+        <div class="vp-topbar-right">
+          <div style="position:relative;">
+            <button class="vp-topbar-btn" aria-label="Notifications" data-notif-toggle>
+              <i class="lni lni-bell" aria-hidden="true"></i>
+              <span class="vp-badge-count">3</span>
+            </button>
+            <div class="vp-notif-dropdown"></div>
+          </div>
+          <button class="vp-topbar-btn" aria-label="Messages" data-messages>
+            <i class="lni lni-envelope" aria-hidden="true"></i>
+          </button>
+          <a href="index.html" class="vp-btn vp-btn-outline" style="font-size:.75rem;">
+            <i class="lni lni-home" aria-hidden="true"></i> Main Site
+          </a>
+        </div>
+      </div>
+
+      <main class="vp-content">
+        <div class="vp-page-header">
+          <h2>Orders</h2>
+          <p>Every purchase order, from confirmation to delivery.</p>
+        </div>
+
+        <section class="vp-kpi-grid">
+          <div class="vp-kpi-card">
+            <div class="vp-kpi-icon"><i class="lni lni-cart" aria-hidden="true"></i></div>
+            <div class="vp-kpi-value">48</div>
+            <div class="vp-kpi-label">Open Orders</div>
+          </div>
+          <div class="vp-kpi-card">
+            <div class="vp-kpi-icon"><i class="lni lni-hourglass" aria-hidden="true"></i></div>
+            <div class="vp-kpi-value">8</div>
+            <div class="vp-kpi-label">Awaiting Confirmation</div>
+          </div>
+          <div class="vp-kpi-card">
+            <div class="vp-kpi-icon"><i class="lni lni-checkmark-circle" aria-hidden="true"></i></div>
+            <div class="vp-kpi-value">340</div>
+            <div class="vp-kpi-label">Completed (YTD)</div>
+          </div>
+          <div class="vp-kpi-card">
+            <div class="vp-kpi-icon"><i class="lni lni-wallet" aria-hidden="true"></i></div>
+            <div class="vp-kpi-value">$18.6M</div>
+            <div class="vp-kpi-label">Total Value</div>
+          </div>
+        </section>
+
+        <section class="vp-table-card">
+          <div class="vp-table-head">
+            <h3>All Orders</h3>
+            <div class="vp-table-head-actions">
+              <input type="search" class="vp-table-search" placeholder="Search orders…" data-vp-search="orders-full-table" aria-label="Search orders" />
+              <button class="vp-btn vp-btn-gold" data-new-order>
+                <i class="lni lni-plus" aria-hidden="true"></i> New Order
+              </button>
+            </div>
+          </div>
+          <div class="vp-table-wrap">
+            <table class="vp-table" id="orders-full-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Commodity</th>
+                  <th>Quantity</th>
+                  <th>Value</th>
+                  <th>Status</th>
+                  <th>Delivery</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="vp-toast" class="vp-toast"></div>
+  <script src="js/vendor-portal.js"></script>
+</body>
+</html>

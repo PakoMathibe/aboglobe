@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings | Vendor Portal — ABOGLOBE</title>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body class="vendor-body">
+
+  <div class="vp-layout">
+
+    <aside class="vp-sidebar" id="vp-sidebar" aria-label="Vendor portal navigation">
+      <div class="vp-sidebar-brand">
+        <img src="images/logo.png" alt="ABOGLOBE" />
+        <span>Vendor Portal</span>
+      </div>
+
+      <nav>
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Overview</p>
+          <a href="vendor-portal.html" class="vp-nav-link">
+            <i class="lni lni-dashboard" aria-hidden="true"></i> Dashboard
+          </a>
+          <a href="vp-shipments.html" class="vp-nav-link">
+            <i class="lni lni-ship" aria-hidden="true"></i> Shipments
+          </a>
+          <a href="vp-orders.html" class="vp-nav-link">
+            <i class="lni lni-cart" aria-hidden="true"></i> Orders
+          </a>
+        </div>
+
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Operations</p>
+          <a href="vp-documents.html" class="vp-nav-link">
+            <i class="lni lni-file" aria-hidden="true"></i> Documents
+          </a>
+          <a href="vp-invoices.html" class="vp-nav-link">
+            <i class="lni lni-wallet" aria-hidden="true"></i> Invoices
+          </a>
+          <a href="#" class="vp-nav-link" data-coming-soon="Inventory">
+            <i class="lni lni-package" aria-hidden="true"></i> Inventory
+          </a>
+        </div>
+
+        <div class="vp-nav-group">
+          <p class="vp-nav-label">Account</p>
+          <a href="vp-profile.html" class="vp-nav-link">
+            <i class="lni lni-user" aria-hidden="true"></i> Profile
+          </a>
+          <a href="vp-settings.html" class="vp-nav-link">
+            <i class="lni lni-cog" aria-hidden="true"></i> Settings
+          </a>
+        </div>
+      </nav>
+
+      <div class="vp-sidebar-footer">
+        <div class="vp-user-mini">
+          <div class="vp-user-avatar">JD</div>
+          <div class="vp-user-meta">
+            <strong>John Doe</strong>
+            <span>Acme Trading Co.</span>
+          </div>
+        </div>
+        <a href="login.html" class="vp-nav-link" style="margin-top:.5rem;">
+          <i class="lni lni-exit" aria-hidden="true"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <div class="vp-main">
+      <div class="vp-topbar">
+        <div style="display:flex;align-items:center;gap:.75rem;">
+          <button id="vp-menu-toggle" class="vp-topbar-btn" aria-label="Toggle sidebar" style="display:none;">
+            <i class="lni lni-menu" aria-hidden="true"></i>
+          </button>
+          <h1>Settings</h1>
+        </div>
+        <div class="vp-topbar-right">
+          <button class="vp-topbar-btn" aria-label="Notifications" data-notif-toggle>
+            <i class="lni lni-bell" aria-hidden="true"></i>
+            <span class="vp-badge-count">3</span>
+          </button>
+          <a href="index.html" class="vp-btn vp-btn-outline" style="font-size:.75rem;">
+            <i class="lni lni-home" aria-hidden="true"></i> Main Site
+          </a>
+        </div>
+      </div>
+
+      <main class="vp-content">
+        <div class="vp-page-header">
+          <h2>Account settings</h2>
+          <p>Notifications, security, and preferences for your portal account.</p>
+        </div>
+
+        <div class="vp-form-card">
+          <form onsubmit="event.preventDefault(); alert('Settings saved (demo).');">
+
+            <div class="vp-form-section">
+              <h3>Notifications</h3>
+              <div class="vp-form-grid vp-form-grid--full">
+                <label style="display:flex;align-items:center;gap:.75rem;padding:.5rem 0;cursor:pointer;">
+                  <input type="checkbox" checked />
+                  <span style="font-size:.9rem;">Email me when a new shipment is booked</span>
+                </label>
+                <label style="display:flex;align-items:center;gap:.75rem;padding:.5rem 0;cursor:pointer;">
+                  <input type="checkbox" checked />
+                  <span style="font-size:.9rem;">Email me when invoices are due</span>
+                </label>
+                <label style="display:flex;align-items:center;gap:.75rem;padding:.5rem 0;cursor:pointer;">
+                  <input type="checkbox" checked />
+                  <span style="font-size:.9rem;">Alert me when certificates are about to expire</span>
+                </label>
+                <label style="display:flex;align-items:center;gap:.75rem;padding:.5rem 0;cursor:pointer;">
+                  <input type="checkbox" />
+                  <span style="font-size:.9rem;">Send me the weekly operations digest</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="vp-form-section">
+              <h3>Security</h3>
+              <div class="vp-form-grid">
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="s-current">Current password</label>
+                  <input type="password" id="s-current" class="vp-form-input" placeholder="••••••••" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="s-new">New password</label>
+                  <input type="password" id="s-new" class="vp-form-input" placeholder="Min. 8 characters" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="s-confirm">Confirm new password</label>
+                  <input type="password" id="s-confirm" class="vp-form-input" placeholder="Repeat new password" />
+                </div>
+                <div class="vp-form-field">
+                  <label class="vp-form-label" for="s-2fa">Two-factor authentication</label>
+                  <select id="s-2fa" class="vp-form-select">
+                    <option>Disabled</option>
+                    <option selected>Enabled (Email)</option>
+                    <option>Enabled (Authenticator app)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="vp-form-section">
+              <h3>Danger zone</h3>
+              <div style="padding:1.25rem;border:1px solid rgba(220,38,38,.2);border-radius:12px;background:rgba(220,38,38,.03);">
+                <p style="font-size:.85rem;color:var(--vp-muted);margin-bottom:1rem;">
+                  Deleting your account is permanent. All data, orders, and documents will be permanently removed.
+                </p>
+                <button type="button" class="vp-btn vp-btn-danger" data-confirm="Are you sure? This cannot be undone.">
+                  <i class="lni lni-trash" aria-hidden="true"></i> Delete Account
+                </button>
+              </div>
+            </div>
+
+            <div class="vp-form-actions">
+              <button type="button" class="vp-btn vp-btn-outline">Cancel</button>
+              <button type="submit" class="vp-btn vp-btn-gold">Save Settings</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/vendor-portal.js"></script>
+</body>
+</html>

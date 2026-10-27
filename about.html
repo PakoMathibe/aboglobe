@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us | ABOGLOBE International INC</title>
+  <meta name="description" content="ABOGLOBE International INC — a Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD. 20+ years of global trade, financial instruments, and certified PPE supply across three continents." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About ABOGLOBE International INC" />
+  <meta property="og:description" content="Vancouver-born global trading house. Commodity trading, financial instruments, real estate, and certified medical supplies since 2004." />
+  <meta property="og:image" content="images/about-hq.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { dark:'#2a1a11', mid:'#5e3f28', light:'#8b6846', gold:'#b88a4a', goldlight:'#d4af6a', cream:'#fdfbf7', creamdark:'#f4ebd9' } },
+      fontFamily: { sans:['Inter','sans-serif'], serif:['Inter','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <!-- ===== PRELOADER / PROGRESS / CURSOR ===== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-mark"></div>
+    <div class="preloader-text">ABOGLOBE</div>
+  </div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link" aria-current="page">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg mt-2">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">About Us</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              A Vancouver-born <span class="text-gradient">global trading house.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              Registered BC corp <span class="font-semibold">#1463323</span> — a wholly-owned subsidiary of <span class="font-semibold">ZM PROPERTY TRUST GROUP LTD</span>, led by Dr. Li Weizhong.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-8">
+              <a href="contact.html" class="btn btn-primary">
+                Meet the Team <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#story" class="btn btn-outline">Read Our Story</a>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/about-hq.jpg"
+                   alt="ABOGLOBE headquarters building in Richmond, British Columbia"
+                   width="600" height="450"
+                   fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-buildings&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">Est. Vancouver</span>
+                <span class="hero-image-badge-value">Reg. #1463323</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section aria-label="Key facts" class="px-6 relative z-30 -mt-8">
+      <div class="stats-strip reveal">
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="20" data-suffix="+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Years Experience</p>
+        </div>
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="3" data-suffix="">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Continents</p>
+        </div>
+        <div class="p-10 text-center">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="40" data-suffix="+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Trade Partners</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECOGNITION STRIP ============ -->
+    <section class="py-16 bg-white border-b border-brand-mid/5" aria-labelledby="recognition-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 id="recognition-heading" class="sr-only">Credentials and recognition</h2>
+        <p class="text-center text-xs font-bold text-brand-mid/40 uppercase tracking-[0.3em] mb-10 reveal">
+          Registered, certified &amp; trusted worldwide
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+          <div class="recognition-card">
+            <i class="lni lni-shield" aria-hidden="true"></i>
+            <strong>BC Registered</strong>
+            <span>Reg. #1463323</span>
+          </div>
+          <div class="recognition-card">
+            <i class="lni lni-checkmark-circle" aria-hidden="true"></i>
+            <strong>FDA 510K</strong>
+            <span>Certified distributor</span>
+          </div>
+          <div class="recognition-card">
+            <i class="lni lni-world" aria-hidden="true"></i>
+            <strong>GACC</strong>
+            <span>China export-ready</span>
+          </div>
+          <div class="recognition-card">
+            <i class="lni lni-certificate-badge-1" aria-hidden="true"></i>
+            <strong>ISO 9001</strong>
+            <span>Quality management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section id="story" class="py-32 bg-white relative" aria-labelledby="story-heading">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <header class="story-header reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Our Story</span>
+          <h2 id="story-heading" class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+            From local roots to <span class="text-gradient">global reach.</span>
+          </h2>
+          <p class="text-lg md:text-xl text-brand-mid/70 max-w-2xl leading-relaxed">
+            Three chapters that define who we are — a Vancouver-born trading house that grew into a three-continent operation across commodities, finance, and real estate.
+          </p>
+        </header>
+
+        <!-- Chapter 01 -->
+        <article class="story-chapter reveal">
+          <div class="story-chapter-media">
+            <figure class="story-chapter-image">
+              <img src="images/about-cargo.jpg"
+                   alt="ABOGLOBE cargo container terminal at golden hour"
+                   width="640" height="480" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('story-chapter-image--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-ship&quot; aria-hidden=&quot;true&quot;></i>')" />
+              <figcaption class="story-chapter-badge">
+                <span class="story-chapter-badge-num">01</span>
+                <span class="story-chapter-badge-label">Vancouver · 2004</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="story-chapter-body">
+            <div class="story-chapter-icon"><i class="lni lni-buildings" aria-hidden="true"></i></div>
+            <h3 class="text-3xl md:text-4xl mb-4 leading-tight">Vancouver roots, Pacific Rim vision.</h3>
+            <p class="text-brand-mid/80 leading-relaxed text-lg mb-4">
+              ABOGLOBE International INC (1463323 BC LTD) began as a BC-registered trading company with a sharp focus on the Pacific Rim. What started as a lean export operation quickly grew into a trusted name across Canadian and Asian trade corridors.
+            </p>
+            <p class="text-brand-mid/70 leading-relaxed">
+              As a wholly-owned subsidiary of ZM PROPERTY TRUST GROUP LTD, we established the compliance-first foundation that still governs every shipment and every contract we sign.
+            </p>
+            <div class="story-chapter-tags">
+              <span class="story-tag"><i class="lni lni-checkmark" aria-hidden="true"></i> BC Reg. #1463323</span>
+              <span class="story-tag"><i class="lni lni-checkmark" aria-hidden="true"></i> Subsidiary of ZM Property Trust</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 02 — reuses hero-container-ship.jpg via about-global.jpg -->
+        <article class="story-chapter story-chapter--reverse reveal">
+          <div class="story-chapter-media">
+            <figure class="story-chapter-image">
+              <img src="images/about-global.jpg"
+                   alt="Container ship crossing open water representing ABOGLOBE's global trade network"
+                   width="640" height="480" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('story-chapter-image--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-world&quot; aria-hidden=&quot;true&quot;></i>')" />
+              <figcaption class="story-chapter-badge">
+                <span class="story-chapter-badge-num">02</span>
+                <span class="story-chapter-badge-label">Brazil · Asia · 2010+</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="story-chapter-body">
+            <div class="story-chapter-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+            <h3 class="text-3xl md:text-4xl mb-4 leading-tight">Three continents, one supply chain.</h3>
+            <p class="text-brand-mid/80 leading-relaxed text-lg mb-4">
+              Direct relationships with manufacturers and distributors across Brazil, Malaysia, China, and Thailand opened the door to large-scale commodity flows — white sugar, premium poultry, soybean products, edible oils, beef, and energy resources (EN590, D6, LNG).
+            </p>
+            <p class="text-brand-mid/70 leading-relaxed">
+              We complete investment and sales of bulk trade commodities through <strong>OTG, DDP, FOB, and CIF</strong> — with every shipment arriving fully certified, inspected, and traceable from source to destination.
+            </p>
+            <div class="story-chapter-tags">
+              <span class="story-tag"><i class="lni lni-checkmark" aria-hidden="true"></i> Brazil · Malaysia · China</span>
+              <span class="story-tag"><i class="lni lni-checkmark" aria-hidden="true"></i> OTG · DDP · FOB · CIF</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chapter 03 -->
+        <article class="story-chapter reveal">
+          <div class="story-chapter-media">
+            <figure class="story-chapter-image">
+              <img src="images/about-finance.jpg"
+                   alt="Financial instruments and trade documents on a walnut desk"
+                   width="640" height="480" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('story-chapter-image--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-investment&quot; aria-hidden=&quot;true&quot;></i>')" />
+              <figcaption class="story-chapter-badge">
+                <span class="story-chapter-badge-num">03</span>
+                <span class="story-chapter-badge-label">Finance · PPE · 2016+</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="story-chapter-body">
+            <div class="story-chapter-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+            <h3 class="text-3xl md:text-4xl mb-4 leading-tight">Finance and certified medical — same standards.</h3>
+            <p class="text-brand-mid/80 leading-relaxed text-lg mb-4">
+              Our dedicated financial investment and financing division focuses on <strong>DLC, SBLC, and BG</strong> instruments, plus private equity, private credit, real assets, and hedge fund partnerships — backed by established international banking relationships.
+            </p>
+            <p class="text-brand-mid/70 leading-relaxed">
+              In parallel, our Medical &amp; PPE arm distributes <strong>3M, Cranberry, and Cardinal Health</strong> products from certified facilities across Thailand, China, and Vietnam — fully FDA 510K, CE, and ISO certified.
+            </p>
+            <div class="story-chapter-tags">
+              <span class="story-tag"><i class="lni lni-checkmark" aria-hidden="true"></i> DLC · SBLC · BG</span>
+              <span class="story-tag"><i class="lni lni-checkmark" aria-hidden="true"></i> FDA 510K · CE · ISO</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="values-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Our Values</span>
+          <h2 id="values-heading" class="text-4xl md:text-5xl">What we stand for.</h2>
+        </header>
+        <div class="values-horizontal">
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="lni lni-shield" aria-hidden="true"></i></div>
+            <h3 class="text-xl font-bold mb-3">Reliability</h3>
+            <p class="text-brand-mid/70 leading-relaxed">Every shipment, every instrument, every transaction — delivered exactly as promised. Our word is our bond.</p>
+          </article>
+          <article class="value-card reveal delay-100">
+            <div class="value-icon"><i class="lni lni-checkmark-circle" aria-hidden="true"></i></div>
+            <h3 class="text-xl font-bold mb-3">Compliance</h3>
+            <p class="text-brand-mid/70 leading-relaxed">Full certification and traceability across every stage — GACC, FDA 510K, CE, and ISO, without exception.</p>
+          </article>
+          <article class="value-card reveal delay-200">
+            <div class="value-icon"><i class="lni lni-bulb" aria-hidden="true"></i></div>
+            <h3 class="text-xl font-bold mb-3">Innovation</h3>
+            <p class="text-brand-mid/70 leading-relaxed">We structure creative trade and capital solutions that solve real operational challenges for our partners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIRECTOR QUOTE ============ -->
+    <section class="py-32 bg-brand-dark relative overflow-hidden" aria-labelledby="director-heading">
+      <i class="lni lni-quotation absolute top-10 left-10 text-9xl text-brand-gold/5 pointer-events-none" aria-hidden="true"></i>
+
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10 reveal">
+        <div class="md:col-span-4">
+          <figure class="director-portrait">
+            <div class="director-portrait-img director-portrait-img--photo">
+              <img src="images/about-director.jpg"
+                   alt="Portrait of Dr. Li Weizhong, CEO and Director of ABOGLOBE"
+                   width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-user&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <figcaption class="mt-6">
+              <h4 class="text-brand-goldlight font-semibold text-xl">Dr. Li Weizhong</h4>
+              <p class="text-brand-cream/50 text-sm mt-1">CEO and Director, ABOGLOBE International INC</p>
+              <p class="text-brand-cream/40 text-xs mt-2">20+ years in trade and real estate</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="md:col-span-8">
+          <h2 id="director-heading" class="text-3xl text-white mb-2">Message from the Director</h2>
+          <div class="w-16 h-1 bg-brand-gold mb-6"></div>
+          <blockquote class="text-xl md:text-2xl text-brand-cream/90 leading-relaxed">
+            "I am delighted to extend my sincere gratitude for your continued trust in ABOGLOBE International INC. Our commitment to excellence in global trade, meticulous financial services, and the distribution of top-tier medical supplies remains unwavering. As we navigate the intricacies of international markets, we pledge to uphold the highest standards of reliability, responsibility, and innovation. Your success is our priority, and we look forward to fostering lasting partnerships that contribute to mutual growth."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEADERSHIP TEAM ============ -->
+    <section class="py-32 bg-white" aria-labelledby="team-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Leadership</span>
+          <h2 id="team-heading" class="text-4xl md:text-5xl mb-4">The people behind ABOGLOBE.</h2>
+          <p class="text-lg text-brand-mid/70">A senior team with decades of combined experience across trade, finance, and real estate.</p>
+        </header>
+
+        <div class="team-grid">
+          <!-- Leader 1 — reuses director portrait -->
+          <article class="team-card reveal">
+            <div class="team-photo">
+              <img src="images/leader-1.jpg"
+                   alt="Dr. Li Weizhong"
+                   width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('team-photo--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<span class=&quot;team-initials&quot;>LW</span>')" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Dr. Li Weizhong</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-2">CEO &amp; Director</p>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">20+ years leading global trade, finance, and real estate operations across three continents.</p>
+            </div>
+          </article>
+
+          <!-- Leader 2 -->
+          <article class="team-card reveal delay-100">
+            <div class="team-photo">
+              <img src="images/leader-2.jpg"
+                   alt="Deng Yufei"
+                   width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('team-photo--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<span class=&quot;team-initials&quot;>DY</span>')" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">Deng Yufei</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-2">CEO, ABOGLOBE China</p>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Leads our Hainan operations and Asia-Pacific commodity and PPE supply relationships.</p>
+            </div>
+          </article>
+
+          <!-- Leader 3 -->
+          <article class="team-card reveal delay-200">
+            <div class="team-photo">
+              <img src="images/leader-3.jpg"
+                   alt="ABOGLOBE Brazil regional director"
+                   width="400" height="400" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('team-photo--fallback');this.parentElement.insertAdjacentHTML('afterbegin','<span class=&quot;team-initials&quot;>BR</span>')" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-1">São Paulo Team</h3>
+              <p class="text-brand-gold font-semibold text-sm mb-2">Regional Director, Brazil</p>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Manages BRF partnerships, sugar sourcing, and logistics across South America.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR JOURNEY — HORIZONTAL TIMELINE ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="journey-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-20 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Our Journey</span>
+          <h2 id="journey-heading" class="text-4xl md:text-5xl">Two decades of growth.</h2>
+        </header>
+
+        <ol class="timeline-horizontal reveal" aria-label="Company milestones">
+          <li class="timeline-h-item">
+            <div class="timeline-h-year" aria-label="Year 2004">2004</div>
+            <div class="timeline-h-line" aria-hidden="true"></div>
+            <div class="timeline-h-card">
+              <div class="timeline-h-icon"><i class="lni lni-flag" aria-hidden="true"></i></div>
+              <h4 class="font-bold mb-2">Founded in Vancouver</h4>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">ABOGLOBE established as a BC-registered trading company focused on Pacific Rim commodity flows.</p>
+            </div>
+          </li>
+
+          <li class="timeline-h-item">
+            <div class="timeline-h-year" aria-label="Year 2010">2010</div>
+            <div class="timeline-h-line" aria-hidden="true"></div>
+            <div class="timeline-h-card">
+              <div class="timeline-h-icon"><i class="lni lni-world" aria-hidden="true"></i></div>
+              <h4 class="font-bold mb-2">Brazil Partnerships</h4>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Direct relationships with BRF and sugar producers — enabling large-scale poultry and sugar exports.</p>
+            </div>
+          </li>
+
+          <li class="timeline-h-item">
+            <div class="timeline-h-year" aria-label="Year 2016">2016</div>
+            <div class="timeline-h-line" aria-hidden="true"></div>
+            <div class="timeline-h-card">
+              <div class="timeline-h-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <h4 class="font-bold mb-2">Financial Division</h4>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Structured trade finance (DLC, SBLC, BG) added as a core service line for international clients.</p>
+            </div>
+          </li>
+
+          <li class="timeline-h-item">
+            <div class="timeline-h-year" aria-label="Year 2020">2020</div>
+            <div class="timeline-h-line" aria-hidden="true"></div>
+            <div class="timeline-h-card">
+              <div class="timeline-h-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <h4 class="font-bold mb-2">PPE Response</h4>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Certified 3M and Cranberry products delivered to Canadian healthcare during the pandemic.</p>
+            </div>
+          </li>
+
+          <li class="timeline-h-item">
+            <div class="timeline-h-year" aria-label="Year 2024">2024</div>
+            <div class="timeline-h-line" aria-hidden="true"></div>
+            <div class="timeline-h-card">
+              <div class="timeline-h-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <h4 class="font-bold mb-2">Real Estate Expansion</h4>
+              <p class="text-brand-mid/70 text-sm leading-relaxed">Vancouver luxury villa and condo developments launched under the ZM Property Trust umbrella.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ BRANCHES ============ -->
+    <section class="py-32 bg-white" aria-labelledby="branches-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Global Offices</span>
+          <h2 id="branches-heading" class="text-4xl md:text-5xl">Three continents, one team.</h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+          <article class="branch-card">
+            <div class="branch-flag" aria-hidden="true">🇨🇦</div>
+            <h3 class="branch-title">Vancouver · HQ</h3>
+            <p class="branch-address">Suite 305 – 5811 Cooney Rd, Richmond BC, Canada V6X3M1</p>
+            <div class="branch-meta"><i class="lni lni-phone" aria-hidden="true"></i> 778-744-3806</div>
+          </article>
+          <article class="branch-card">
+            <div class="branch-flag" aria-hidden="true">🇧🇷</div>
+            <h3 class="branch-title">São Paulo · ABOGLOBE Brazil</h3>
+            <p class="branch-address">Ed. São Luiz Center, Av. Paulista 2.300, São Paulo, 01310-300</p>
+            <div class="branch-meta"><i class="lni lni-map-marker" aria-hidden="true"></i> Paulista Consolação</div>
+          </article>
+          <article class="branch-card">
+            <div class="branch-flag" aria-hidden="true">🇨🇳</div>
+            <h3 class="branch-title">Hainan · ABOGLOBE China</h3>
+            <p class="branch-address">Hainan, China · Deng Yufei, CEO</p>
+            <div class="branch-meta"><i class="lni lni-user" aria-hidden="true"></i> Regional Director</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CAREERS STRIP ============ -->
+    <section class="py-20 bg-brand-creamdark border-y border-brand-mid/10" aria-labelledby="careers-heading">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="reveal-left max-w-xl">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-3 block">Careers</span>
+          <h2 id="careers-heading" class="text-3xl md:text-4xl mb-3">Build the future of global trade.</h2>
+          <p class="text-brand-mid/70 leading-relaxed">We're always looking for experienced traders, compliance specialists, and logistics professionals. Join a growing Vancouver-based team with global reach.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary reveal-right shrink-0">
+          View Open Roles <i class="lni lni-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Ready to work with us?</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">Speak to our team about commodity supply, financial instruments, or real estate partnerships.</p>
+        <a href="contact.html" class="btn btn-gold text-lg">Get in Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="login.html" class="hover:text-brand-gold transition-colors">Vendor Login</a></li>
+          <li><a href="signup.html" class="hover:text-brand-gold transition-colors">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ UNIFIED FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT WINDOW ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

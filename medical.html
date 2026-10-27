@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Medical Supplies &amp; PPE | ABOGLOBE International INC</title>
+  <meta name="description" content="FDA 510K, CE, and ISO-certified medical supplies — 3M masks, Cranberry gloves, Cardinal Health — distributed to hospitals, governments, and enterprises worldwide by ABOGLOBE International INC." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Certified Medical Supplies &amp; PPE — ABOGLOBE International INC" />
+  <meta property="og:description" content="FDA 510K, CE, and ISO-certified PPE from 3M, Cranberry, and Cardinal Health — distributed globally with full traceability." />
+  <meta property="og:image" content="images/medical-hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { dark:'#2a1a11', mid:'#5e3f28', light:'#8b6846', gold:'#b88a4a', goldlight:'#d4af6a', cream:'#fdfbf7', creamdark:'#f4ebd9' } },
+      fontFamily: { sans:['Inter','sans-serif'], serif:['Inter','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-mark"></div>
+    <div class="preloader-text">ABOGLOBE</div>
+  </div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg mt-2">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Medical &amp; PPE</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Certified PPE, <span class="text-gradient">globally sourced.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              FDA 510K, CE, and ISO-certified protective equipment — 3M masks, Cranberry gloves, Cardinal Health — distributed to hospitals, governments, and enterprises worldwide.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-8">
+              <a href="contact.html" class="btn btn-primary">
+                Request a Quote <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#products" class="btn btn-outline">View Products</a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 pt-8 text-xs text-brand-mid/60">
+              <div class="flex items-center gap-2"><i class="lni lni-shield text-brand-gold" aria-hidden="true"></i> FDA 510K</div>
+              <div class="flex items-center gap-2"><i class="lni lni-checkmark-circle text-brand-gold" aria-hidden="true"></i> CE Marked</div>
+              <div class="flex items-center gap-2"><i class="lni lni-certificate-badge-1 text-brand-gold" aria-hidden="true"></i> ISO 13485</div>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/medical-hero.jpg"
+                   alt="FDA-certified medical masks and nitrile gloves arranged on a warm cream surface"
+                   width="600" height="450" fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-heart-monitor&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">Certified</span>
+                <span class="hero-image-badge-value">FDA 510K · CE · ISO</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAR ============ -->
+    <section aria-label="Key figures" class="px-6 relative z-30 -mt-8">
+      <div class="stats-strip reveal">
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="40" data-suffix="M+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Units Delivered</p>
+        </div>
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="120" data-suffix="+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Healthcare Clients</p>
+        </div>
+        <div class="p-10 text-center">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="100" data-suffix="%">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Batch Traceability</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS DEEP-DIVE ============ -->
+    <section class="py-24 bg-white" aria-labelledby="certs-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Certifications</span>
+          <h2 id="certs-heading" class="text-4xl md:text-5xl mb-4">Fully certified, fully traceable.</h2>
+          <p class="text-lg text-brand-mid/70">Every product we distribute carries a complete certificate pack — batch-traceable from factory floor to delivery.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <article class="cert-detail-card reveal">
+            <div class="cert-detail-icon"><i class="lni lni-shield" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">FDA 510K</h3>
+            <p class="cert-detail-body">US Food &amp; Drug Administration clearance for medical devices — the benchmark for PPE safety and efficacy.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-100">
+            <div class="cert-detail-icon"><i class="lni lni-world" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">CE Marked</h3>
+            <p class="cert-detail-body">European conformity — every product cleared for distribution across the EU and EEA.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-200">
+            <div class="cert-detail-icon"><i class="lni lni-checkmark-circle" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">ISO 13485</h3>
+            <p class="cert-detail-body">Medical devices quality management system — end-to-end traceability and consistency.</p>
+          </article>
+          <article class="cert-detail-card reveal delay-300">
+            <div class="cert-detail-icon"><i class="lni lni-certificate-badge-1" aria-hidden="true"></i></div>
+            <h3 class="cert-detail-title">ISO 9001</h3>
+            <p class="cert-detail-body">General quality management — our processes meet the highest international standards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section id="products" class="py-32 bg-brand-creamdark" aria-labelledby="products-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Portfolio</span>
+          <h2 id="products-heading" class="text-4xl md:text-5xl mb-4">Our product portfolio.</h2>
+          <p class="text-brand-mid/70">Globally recognized brands and certified equipment.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <article class="product-card reveal">
+            <div class="product-image">
+              <img src="images/product-cranberry.jpg"
+                   alt="Cranberry Nitrile Gloves packaging"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#88b8a4,#3b6b5a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-hand&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-3">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> Malaysia origin
+              </div>
+              <h3 class="text-2xl mb-3">Cranberry™ Nitrile Gloves</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm mb-4">Exceptional comfort, durability, and superior barrier protection — trusted in healthcare environments worldwide.</p>
+              <ul class="product-features">
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Powder-free · latex-free</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Chemo-rated barrier</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> 200 gloves per box</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal delay-100">
+            <div class="product-image">
+              <img src="images/product-cardinal.jpg"
+                   alt="Cardinal Health medical gloves"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-medical&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-3">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> Medical-grade
+              </div>
+              <h3 class="text-2xl mb-3">Cardinal Health™ Gloves</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm mb-4">Manufactured to the highest medical standards — excellent tactile sensitivity and strength for professional safety.</p>
+              <ul class="product-features">
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Sterile &amp; non-sterile options</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Surgical &amp; exam grades</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> ASTM D6319 compliant</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal delay-200">
+            <div class="product-image">
+              <img src="images/product-3m.jpg"
+                   alt="3M N95 respirator masks"
+                   width="400" height="210" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-bubble&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <div class="inline-flex items-center gap-2 bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold mb-3">
+                <i class="lni lni-checkmark" aria-hidden="true"></i> FDA 510K
+              </div>
+              <h3 class="text-2xl mb-3">3M™ Masks &amp; Respirators</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm mb-4">Respirators and surgical masks with FDA 510K, CE, and ISO certification — full respiratory protection for clinical settings.</p>
+              <ul class="product-features">
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> 3M 1826 &amp; 1820 models</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> NIOSH-approved N95</li>
+                <li><i class="lni lni-checkmark-circle" aria-hidden="true"></i> Fluid-resistant options</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW ORDERING WORKS ============ -->
+    <section class="py-32 bg-white" aria-labelledby="process-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-20 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">How It Works</span>
+          <h2 id="process-heading" class="text-4xl md:text-5xl mb-6">From quote to delivery.</h2>
+          <p class="text-lg text-brand-mid/70">A four-step process engineered for hospital, government, and corporate procurement.</p>
+        </header>
+
+        <div class="process-track">
+          <div class="process-step reveal">
+            <div class="process-marker">01</div>
+            <h4 class="mb-3">Quote &amp; Scoping</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">Send us your product list, quantities, and delivery window — we respond within 24 hours with pricing and availability.</p>
+          </div>
+          <div class="process-step reveal delay-100">
+            <div class="process-marker">02</div>
+            <h4 class="mb-3">Compliance Review</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">We provide full certificate packs — FDA 510K, CE, ISO 13485 — for your procurement and audit teams.</p>
+          </div>
+          <div class="process-step reveal delay-200">
+            <div class="process-marker">03</div>
+            <h4 class="mb-3">Sourcing &amp; QC</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">Products inspected at source, batch-traceability confirmed, and packing slips prepared before shipment.</p>
+          </div>
+          <div class="process-step reveal delay-300">
+            <div class="process-marker">04</div>
+            <h4 class="mb-3">Delivery &amp; Support</h4>
+            <p class="text-sm text-brand-mid/70 leading-relaxed">Cold-chain or standard delivery — OTG, DDP, FOB, or CIF. Ongoing re-order support included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ USE CASES ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="usecase-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Who We Supply</span>
+          <h2 id="usecase-heading" class="text-4xl md:text-5xl">Built for critical environments.</h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="usecase-card reveal overflow-hidden">
+            <div class="usecase-image">
+              <img src="images/usecase-hospital.jpg"
+                   alt="Hospital staff with certified PPE"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#88b8a4,#3b6b5a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-hospital&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl mb-3">Hospitals &amp; Health Systems</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Certified medical equipment, delivered on schedule with full batch traceability — from OR-grade gloves to N95 respirators.</p>
+            </div>
+          </article>
+
+          <article class="usecase-card reveal delay-100 overflow-hidden">
+            <div class="usecase-image">
+              <img src="images/usecase-government.jpg"
+                   alt="Government procurement PPE delivery"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#b88a4a,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-flag&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl mb-3">Government Procurement</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Dependable delivery solutions for public health and emergency response programs — with full audit-ready documentation.</p>
+            </div>
+          </article>
+
+          <article class="usecase-card reveal delay-200 overflow-hidden">
+            <div class="usecase-image">
+              <img src="images/usecase-corporate.jpg"
+                   alt="Corporate safety PPE program"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-users&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl mb-3">Corporate Safety</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Reliable protective gear for industrial, manufacturing, and enterprise safety programs — with re-order support.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASE STUDIES ============ -->
+    <section class="py-32 bg-white" aria-labelledby="case-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Recent Engagements</span>
+          <h2 id="case-heading" class="text-4xl md:text-5xl mb-4">Trusted in critical moments.</h2>
+          <p class="text-lg text-brand-mid/70">Real examples of how we've supported hospitals, governments, and enterprises.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="case-card fintech-card reveal">
+            <div class="case-image case-image--photo">
+              <img src="images/case-masks.jpg"
+                   alt="Certified masks delivery to provincial health authority"
+                   width="400" height="170" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#88b8a4,#3b6b5a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-heart-monitor&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Provincial Health · Canada</p>
+              <h3 class="text-lg mb-3">2.4M 3M 1826 Masks</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">Emergency PPE delivery during Q1 2024 — batch-traceable, certified, and landed in 28 days.</p>
+            </div>
+          </article>
+
+          <article class="case-card fintech-card reveal delay-100">
+            <div class="case-image case-image--photo">
+              <img src="images/case-gloves.jpg"
+                   alt="Glove shipment to national hospital network"
+                   width="400" height="170" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#3b6b5a,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-hand&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Hospital Network · USA</p>
+              <h3 class="text-lg mb-3">18M Nitrile Gloves</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">Multi-year supply agreement with a national hospital network — DDP delivery, quarterly re-orders.</p>
+            </div>
+          </article>
+
+          <article class="case-card fintech-card reveal delay-200">
+            <div class="case-image case-image--photo">
+              <img src="images/case-ppe-bulk.jpg"
+                   alt="Bulk PPE shipment for government procurement"
+                   width="400" height="170" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#b88a4a,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-flag&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">Government · Southeast Asia</p>
+              <h3 class="text-lg mb-3">Bulk PPE Program</h3>
+              <p class="text-sm text-brand-mid/70 leading-relaxed">6-month emergency stockpile program — 4 product categories, 12 delivery sites, 100% on-time.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <header class="text-center mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Questions</span>
+          <h2 id="faq-heading" class="text-4xl md:text-5xl mb-6">Procurement FAQs.</h2>
+          <p class="text-lg text-brand-mid/70">Everything your procurement and compliance teams need to know.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>Are your products fully certified?</summary>
+            <p>Yes — every product we distribute carries FDA 510K (US), CE (EU), and ISO 13485 certification. Each shipment includes a complete certificate pack, batch traceability documentation, and origin certificates.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What are your minimum order quantities?</summary>
+            <p>PPE can be shipped as low as a single pallet for emergency needs. Standard re-orders start at 4–6 pallets. Bulk government programs can be structured for 10,000+ units per product.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does delivery take?</summary>
+            <p>For in-stock products, delivery is typically 14–30 days depending on destination and trade terms. Emergency shipments can be expedited to 5–7 days for verified healthcare and government clients.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you support government and hospital procurement processes?</summary>
+            <p>Yes — we're experienced with public tenders, RFP processes, and hospital procurement portals. We supply audit-ready documentation, compliance certificates, and delivery confirmations.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which trade terms do you support?</summary>
+            <p>We work under OTG, DDP, FOB, and CIF. Payment terms are typically net-30 for qualified institutional clients, with DLC and SBLC options for larger volume programs.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUOTE CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Need certified medical supplies?</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">ABOGLOBE International INC continues to be a reliable partner in global medical supply and PPE distribution.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="btn btn-gold text-lg">Request a Quote</a>
+          <a href="vendor-portal.html" class="btn btn-ghost-light text-lg">Existing Client Login</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="login.html" class="hover:text-brand-gold transition-colors">Vendor Login</a></li>
+          <li><a href="signup.html" class="hover:text-brand-gold transition-colors">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ UNIFIED FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT WINDOW ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

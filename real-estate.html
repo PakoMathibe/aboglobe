@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Real Estate &amp; Property Development | ABOGLOBE International INC</title>
+  <meta name="description" content="Luxury villas, condominiums, and commercial towers in Vancouver — developed by ABOGLOBE International INC under the ZM Property Trust Group umbrella." />
+  <meta name="theme-color" content="#2a1a11" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vancouver Luxury Real Estate — ABOGLOBE International INC" />
+  <meta property="og:description" content="Luxury villas, elegant condominiums, and commercial towers across Vancouver's most desirable neighbourhoods." />
+  <meta property="og:image" content="images/realestate-hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { dark:'#2a1a11', mid:'#5e3f28', light:'#8b6846', gold:'#b88a4a', goldlight:'#d4af6a', cream:'#fdfbf7', creamdark:'#f4ebd9' } },
+      fontFamily: { sans:['Inter','sans-serif'], serif:['Inter','sans-serif'] }
+    }}};
+  </script>
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body class="bg-brand-cream text-brand-dark flex flex-col min-h-screen relative">
+
+  <div id="preloader" aria-hidden="true"><div class="preloader-mark"></div><div class="preloader-text">ABOGLOBE</div></div>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+
+      <a href="index.html" class="flex items-center gap-3 z-50 relative" aria-label="ABOGLOBE home">
+        <img src="images/logo.png" alt="ABOGLOBE logo" class="h-14 w-auto" width="56" height="56" />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-7 h-full">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+
+        <div class="has-mega-menu relative h-full flex items-center">
+          <button type="button" class="nav-link flex items-center gap-1 focus:outline-none"
+                  aria-expanded="false" aria-haspopup="true" aria-controls="mega-menu-expertise">
+            Our Expertise <i class="lni lni-chevron-down text-xs" aria-hidden="true"></i>
+          </button>
+          <div id="mega-menu-expertise" class="mega-menu-panel" role="menu" aria-label="Our expertise">
+            <a href="commodity.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-ship" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Commodity Trading</h4><p>Global markets for sugar, chicken, soy &amp; energy.</p></div>
+            </a>
+            <a href="investment.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-investment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Financial Investment</h4><p>DLC, SBLC, BG instruments &amp; structured finance.</p></div>
+            </a>
+            <a href="real-estate.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-apartment" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Real Estate</h4><p>Luxury villas &amp; commercial towers in Vancouver.</p></div>
+            </a>
+            <a href="medical.html" class="mega-item" role="menuitem">
+              <div class="mega-icon"><i class="lni lni-heart-monitor" aria-hidden="true"></i></div>
+              <div class="mega-text"><h4>Medical &amp; PPE</h4><p>FDA 510K-certified masks, gloves &amp; protective gear.</p></div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="h-6 w-px bg-brand-mid/15" aria-hidden="true"></div>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="signup.html" class="btn btn-gold text-sm">Get Started</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-mid focus:outline-none"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="lni lni-menu" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-mid/10 absolute w-full top-20 left-0 shadow-xl">
+      <div class="flex flex-col px-6 py-6 space-y-4">
+        <a href="index.html" class="text-brand-dark font-semibold text-lg">Home</a>
+        <a href="about.html" class="text-brand-dark font-semibold text-lg">About Us</a>
+        <div class="h-px bg-brand-mid/10 w-full"></div>
+        <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mt-2">Expertise</p>
+        <a href="commodity.html" class="text-brand-mid font-medium">Commodity Trading</a>
+        <a href="investment.html" class="text-brand-mid font-medium">Financial Investment</a>
+        <a href="real-estate.html" class="text-brand-mid font-medium">Real Estate</a>
+        <a href="medical.html" class="text-brand-mid font-medium">Medical &amp; PPE</a>
+        <div class="h-px bg-brand-mid/10 w-full mt-2"></div>
+        <a href="contact.html" class="text-brand-dark font-semibold text-lg mt-2">Contact Us</a>
+        <div class="flex gap-3 pt-4 border-t border-brand-mid/10">
+          <a href="login.html" class="flex-1 btn btn-outline text-sm">Sign In</a>
+          <a href="signup.html" class="flex-1 btn btn-gold text-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow overflow-hidden">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative py-24 lg:py-32 border-b border-brand-mid/10 overflow-hidden" aria-labelledby="hero-heading">
+      <div class="hero-blob animate-float" style="width:400px;height:400px;background:#b88a4a;top:-100px;right:-100px;opacity:0.25;" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Real Estate</span>
+            <h1 id="hero-heading" class="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+              Shaping the <span class="text-gradient">Vancouver skyline.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-brand-mid/80 leading-relaxed max-w-xl">
+              Luxury villas, elegant condominiums, and modern commercial towers — combining architectural excellence with sustainable design across Vancouver's most desirable neighbourhoods.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-8">
+              <a href="contact.html" class="btn btn-primary">
+                Inquire About Properties <i class="lni lni-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-6 pt-8 text-xs text-brand-mid/60">
+              <div class="flex items-center gap-2"><i class="lni lni-home text-brand-gold" aria-hidden="true"></i> 24 developments</div>
+              <div class="flex items-center gap-2"><i class="lni lni-map-marker text-brand-gold" aria-hidden="true"></i> Vancouver &amp; Richmond</div>
+              <div class="flex items-center gap-2"><i class="lni lni-leaf text-brand-gold" aria-hidden="true"></i> LEED-oriented</div>
+            </div>
+          </div>
+
+          <div class="reveal delay-200 relative">
+            <figure class="hero-image-frame">
+              <img src="images/realestate-hero.jpg"
+                   alt="Luxury Vancouver villa lit at dusk"
+                   width="600" height="450" fetchpriority="high"
+                   onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;hero-image-placeholder&quot;><i class=&quot;lni lni-apartment&quot;></i></div>')" />
+              <figcaption class="hero-image-badge">
+                <span class="hero-image-badge-label">Vancouver</span>
+                <span class="hero-image-badge-value">Luxury living</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAR ============ -->
+    <section aria-label="Key figures" class="px-6 relative z-30 -mt-8">
+      <div class="stats-strip reveal">
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="24" data-suffix="">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Developments</p>
+        </div>
+        <div class="p-10 text-center border-b md:border-b-0 md:border-r border-brand-mid/10">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="240" data-suffix="+">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">Units Delivered</p>
+        </div>
+        <div class="p-10 text-center">
+          <h3 class="text-5xl font-extrabold text-brand-gold mb-2 counter font-sans" data-target="100" data-suffix="%">0</h3>
+          <p class="text-xs font-bold text-brand-mid/60 uppercase tracking-widest">On-Time Completion</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PHILOSOPHY ============ -->
+    <section class="py-32 bg-white" aria-labelledby="philosophy-heading">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Our Philosophy</span>
+          <h2 id="philosophy-heading" class="text-4xl md:text-5xl mb-8">Craft, innovation, and lasting value.</h2>
+          <div class="space-y-6 text-lg text-brand-mid/80 leading-relaxed">
+            <p>ABOGLOBE International INC is dedicated to shaping the skyline of Vancouver through the development of high-end residential and commercial properties.</p>
+            <p>Our real estate portfolio includes luxury villas, elegant condominiums, and modern office towers that combine architectural excellence with functional design — enhanced by premium materials, natural light, and sustainable building practices.</p>
+          </div>
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="bg-brand-cream p-6 rounded-xl border border-brand-mid/5">
+              <i class="lni lni-home text-2xl text-brand-gold mb-3 block" aria-hidden="true"></i>
+              <h4 class="font-bold">Luxury Villas</h4>
+            </div>
+            <div class="bg-brand-cream p-6 rounded-xl border border-brand-mid/5">
+              <i class="lni lni-buildings text-2xl text-brand-gold mb-3 block" aria-hidden="true"></i>
+              <h4 class="font-bold">Commercial Towers</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 reveal delay-200">
+          <div class="bg-brand-dark p-10 rounded-[2rem] text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-gold/20 rounded-full blur-3xl" aria-hidden="true"></div>
+            <i class="lni lni-quotation text-5xl text-brand-gold/30 mb-6 block" aria-hidden="true"></i>
+            <blockquote class="text-xl font-light leading-relaxed relative z-10">
+              "Each project reflects our commitment to premium craftsmanship, innovative design, and sustainable development — enhancing the local landscape while delivering lasting value."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROPERTY ============ -->
+    <section class="py-32 bg-brand-dark relative overflow-hidden" aria-labelledby="featured-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 reveal-left">
+          <span class="text-xs font-bold text-brand-goldlight uppercase tracking-[0.3em] mb-4 block">Featured Development</span>
+          <h2 id="featured-heading" class="text-white mb-6 leading-tight">
+            The Kerrisdale <span class="text-brand-goldlight">Collection</span>
+          </h2>
+          <p class="text-lg text-brand-cream/70 leading-relaxed mb-8 max-w-xl">
+            Six custom luxury villas on Vancouver's most desirable west side. Walnut and glass façades, floor-to-ceiling windows, and private gardens — designed for families who demand both privacy and proximity.
+          </p>
+
+          <div class="grid grid-cols-3 gap-6 mb-10 max-w-lg">
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">6</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Villas</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">4–6</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">Bedrooms</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-brand-goldlight font-sans">$4.2M+</p>
+              <p class="text-xs text-brand-cream/50 uppercase tracking-widest">From</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn btn-gold">Request Brochure <i class="lni lni-arrow-right" aria-hidden="true"></i></a>
+            <a href="contact.html" class="btn btn-ghost-light">Book a Viewing</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 reveal-right">
+          <div class="spotlight-card">
+            <div class="spotlight-image spotlight-image--photo">
+              <img src="images/realestate-hero.jpg"
+                   alt="The Kerrisdale Collection luxury villa exterior at dusk"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-home&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="spotlight-body">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Pre-sale · 2025</p>
+              <h4 class="font-bold mb-1">Kerrisdale · Vancouver West</h4>
+              <p class="text-sm text-brand-mid/70">6 villas · private gardens · completion Q4 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio" class="py-32 bg-brand-creamdark" aria-labelledby="portfolio-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Portfolio</span>
+          <h2 id="portfolio-heading" class="text-4xl md:text-5xl mb-4">Selected properties.</h2>
+          <p class="text-brand-mid/70">Signature residential and commercial developments across Vancouver.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Kerrisdale — reuses case-condos -->
+          <article class="property-card reveal">
+            <div class="property-image">
+              <img src="images/case-condos.jpg"
+                   alt="Kerrisdale luxury villa exterior"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#b88a4a,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-home&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="property-body">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Kerrisdale</p>
+              <h3 class="text-xl mb-2">Luxury Villa Collection</h3>
+              <p class="text-sm text-brand-mid/70 mb-4">4–6 bed · custom build · sustainable features</p>
+              <div class="flex justify-between text-xs"><span class="text-brand-mid/60">From $4.2M</span><span class="text-brand-gold font-bold">Pre-sale →</span></div>
+            </div>
+          </article>
+
+          <!-- Coal Harbour — reuses realestate-hero -->
+          <article class="property-card reveal delay-100">
+            <div class="property-image">
+              <img src="images/realestate-hero.jpg"
+                   alt="Coal Harbour Tower exterior at blue hour"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-buildings&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="property-body">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Downtown</p>
+              <h3 class="text-xl mb-2">Coal Harbour Tower</h3>
+              <p class="text-sm text-brand-mid/70 mb-4">24 floors · mixed-use · harbour views</p>
+              <div class="flex justify-between text-xs"><span class="text-brand-mid/60">From $1.8M</span><span class="text-brand-gold font-bold">Enquire →</span></div>
+            </div>
+          </article>
+
+          <!-- Richmond — reuses re-property-3 -->
+          <article class="property-card reveal delay-200">
+            <div class="property-image">
+              <img src="images/re-property-3.jpg"
+                   alt="Richmond riverfront condominium building"
+                   width="400" height="220" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-apartment&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="property-body">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Richmond</p>
+              <h3 class="text-xl mb-2">Riverfront Condos</h3>
+              <p class="text-sm text-brand-mid/70 mb-4">1–3 bed · river view · wellness amenities</p>
+              <div class="flex justify-between text-xs"><span class="text-brand-mid/60">From $780K</span><span class="text-brand-gold font-bold">Pre-sale →</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY VANCOUVER ============ -->
+    <section class="py-32 bg-white" aria-labelledby="why-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Why Vancouver</span>
+          <h2 id="why-heading" class="text-4xl md:text-5xl mb-4">Strategic positioning, world-class returns.</h2>
+          <p class="text-brand-mid/70">One of the most desirable cities in the world — and one of the strongest real estate markets in North America.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="fintech-card p-10 reveal text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-brand-cream flex items-center justify-center mb-6">
+              <i class="lni lni-map text-3xl text-brand-gold" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Prime Location</h3>
+            <p class="text-brand-mid/70 leading-relaxed text-sm">Vancouver consistently ranks among the world's most liveable cities — with strong, long-term appreciation and demand.</p>
+          </div>
+          <div class="fintech-card p-10 reveal delay-100 text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-brand-cream flex items-center justify-center mb-6">
+              <i class="lni lni-diamond-alt text-3xl text-brand-gold" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Premium Craftsmanship</h3>
+            <p class="text-brand-mid/70 leading-relaxed text-sm">Walnut cabinetry, European fixtures, engineered stone — every project delivers on materials, comfort, and design.</p>
+          </div>
+          <div class="fintech-card p-10 reveal delay-200 text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-brand-cream flex items-center justify-center mb-6">
+              <i class="lni lni-leaf text-3xl text-brand-gold" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Sustainable Development</h3>
+            <p class="text-brand-mid/70 leading-relaxed text-sm">LEED-oriented design, high-efficiency systems, and thoughtful landscaping — enhancing the neighbourhood and the asset.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEIGHBORHOODS ============ -->
+    <section class="py-32 bg-brand-creamdark" aria-labelledby="hoods-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Neighborhoods</span>
+          <h2 id="hoods-heading" class="text-4xl md:text-5xl mb-4">Where we build.</h2>
+          <p class="text-brand-mid/70">Four distinct Vancouver neighbourhoods — each with its own character, clientele, and investment case.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="neighborhood-card reveal">
+            <div class="neighborhood-image">
+              <img src="images/case-condos.jpg"
+                   alt="Kerrisdale neighbourhood tree-lined street"
+                   width="600" height="260" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#b88a4a,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-home&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Vancouver West</p>
+              <h3 class="text-2xl mb-3">Kerrisdale</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Family-focused, tree-lined, and served by some of Vancouver's best schools — the standard for luxury villas.</p>
+            </div>
+          </article>
+
+          <article class="neighborhood-card reveal delay-100">
+            <div class="neighborhood-image">
+              <img src="images/realestate-hero.jpg"
+                   alt="Coal Harbour waterfront and skyline"
+                   width="600" height="260" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-buildings&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Downtown</p>
+              <h3 class="text-2xl mb-3">Coal Harbour</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Waterfront towers, harbour views, and walkability — Vancouver's most sought-after downtown address.</p>
+            </div>
+          </article>
+
+          <article class="neighborhood-card reveal delay-200">
+            <div class="neighborhood-image">
+              <img src="images/re-property-3.jpg"
+                   alt="Richmond riverfront development"
+                   width="600" height="260" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-apartment&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">Richmond</p>
+              <h3 class="text-2xl mb-3">Riverfront</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Modern wellness-focused condos near the Fraser River — attractive pricing, strong rental demand, and rapid transit access.</p>
+            </div>
+          </article>
+
+          <article class="neighborhood-card reveal delay-300">
+            <div class="neighborhood-image">
+              <img src="images/about-hq.jpg"
+                   alt="West Vancouver mountainside luxury homes"
+                   width="600" height="260" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#88b8a4,#3b6b5a)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-tree&quot; aria-hidden=&quot;true&quot;></i>')" />
+            </div>
+            <div class="p-8">
+              <p class="text-xs font-bold text-brand-gold uppercase tracking-widest mb-2">North Shore</p>
+              <h3 class="text-2xl mb-3">West Vancouver</h3>
+              <p class="text-brand-mid/70 leading-relaxed text-sm">Mountainside estates, ocean views, and privacy — for buyers seeking space and serenity minutes from downtown.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEVELOPMENT PIPELINE ============ -->
+    <section class="py-32 bg-white" aria-labelledby="pipeline-heading">
+      <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Development Pipeline</span>
+          <h2 id="pipeline-heading" class="text-4xl md:text-5xl mb-4">Currently under construction.</h2>
+          <p class="text-brand-mid/70">Live status of our active developments — from ground-breaking to handover.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <article class="pipeline-card reveal">
+            <div class="pipeline-image">
+              <img src="images/case-condos.jpg"
+                   alt="Kerrisdale villas under construction"
+                   width="400" height="200" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#b88a4a,#8b6846)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-home&quot; aria-hidden=&quot;true&quot;></i>')" />
+              <span class="pipeline-status">Construction</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl mb-2">Kerrisdale Collection</h3>
+              <p class="text-brand-mid/70 text-sm mb-4">6 custom villas · Vancouver West</p>
+              <div class="pipeline-progress" aria-label="70% complete">
+                <div class="pipeline-progress-fill" style="width:70%"></div>
+              </div>
+              <p class="text-xs text-brand-mid/60 mt-2">70% complete · Est. Q4 2025</p>
+            </div>
+          </article>
+
+          <article class="pipeline-card reveal delay-100">
+            <div class="pipeline-image">
+              <img src="images/realestate-hero.jpg"
+                   alt="Coal Harbour tower under construction"
+                   width="400" height="200" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#5e3f28,#2a1a11)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-buildings&quot; aria-hidden=&quot;true&quot;></i>')" />
+              <span class="pipeline-status">Pre-sale</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl mb-2">Coal Harbour Tower</h3>
+              <p class="text-brand-mid/70 text-sm mb-4">24 floors · mixed-use · harbour views</p>
+              <div class="pipeline-progress" aria-label="25% complete">
+                <div class="pipeline-progress-fill" style="width:25%"></div>
+              </div>
+              <p class="text-xs text-brand-mid/60 mt-2">25% pre-sold · Est. Q2 2027</p>
+            </div>
+          </article>
+
+          <article class="pipeline-card reveal delay-200">
+            <div class="pipeline-image">
+              <img src="images/re-property-3.jpg"
+                   alt="Richmond riverfront condos under construction"
+                   width="400" height="200" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#d4a574,#5e3f28)';this.parentElement.insertAdjacentHTML('afterbegin','<i class=&quot;lni lni-apartment&quot; aria-hidden=&quot;true&quot;></i>')" />
+              <span class="pipeline-status">Planning</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl mb-2">Riverfront Condos</h3>
+              <p class="text-brand-mid/70 text-sm mb-4">1–3 bed · river view · wellness amenities</p>
+              <div class="pipeline-progress" aria-label="10% complete">
+                <div class="pipeline-progress-fill" style="width:10%"></div>
+              </div>
+              <p class="text-xs text-brand-mid/60 mt-2">10% · Est. Q1 2027</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="py-24 bg-brand-creamdark" aria-labelledby="testimonials-heading">
+      <div class="max-w-5xl mx-auto px-6">
+        <header class="text-center mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Owners &amp; Investors</span>
+          <h2 id="testimonials-heading" class="text-4xl md:text-5xl">What buyers say.</h2>
+        </header>
+
+        <div class="overflow-hidden reveal">
+          <div class="testimonial-track">
+            <div class="testimonial-slide">
+              <div class="bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-brand-mid/5">
+                <i class="lni lni-quotation text-5xl text-brand-gold/30 mb-6 block" aria-hidden="true"></i>
+                <p class="text-xl md:text-2xl font-light leading-relaxed mb-8">"From pre-sale through handover, every milestone was delivered on time and exactly as promised. The build quality is outstanding — walnut, stone, real hardwood. This is what premium actually looks like."</p>
+                <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center text-white font-bold">AK</div><div><p class="font-bold">A. Kwok</p><p class="text-sm text-brand-mid/60">Villa owner · Kerrisdale</p></div></div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-brand-mid/5">
+                <i class="lni lni-quotation text-5xl text-brand-gold/30 mb-6 block" aria-hidden="true"></i>
+                <p class="text-xl md:text-2xl font-light leading-relaxed mb-8">"As a cross-border investor, I needed a developer I could trust to communicate, deliver, and not surprise me. ABOGLOBE did all three — I've since committed to two more projects."</p>
+                <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-brand-mid flex items-center justify-center text-white font-bold">MR</div><div><p class="font-bold">M. Rodriguez</p><p class="text-sm text-brand-mid/60">Investor · Coal Harbour</p></div></div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="bg-white p-10 md:p-14 rounded-3xl shadow-sm border border-brand-mid/5">
+                <i class="lni lni-quotation text-5xl text-brand-gold/30 mb-6 block" aria-hidden="true"></i>
+                <p class="text-xl md:text-2xl font-light leading-relaxed mb-8">"The team understood exactly what our family wanted, walked us through every detail, and handed over a home that exceeded the renders. Rare in this market."</p>
+                <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-brand-goldlight flex items-center justify-center text-white font-bold">SL</div><div><p class="font-bold">S. Liu</p><p class="text-sm text-brand-mid/60">Homeowner · Richmond</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center gap-2 mt-8">
+          <button class="testimonial-dot active" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-32 bg-white" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6">
+        <header class="text-center mb-16 reveal">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.3em] mb-4 block">Questions</span>
+          <h2 id="faq-heading" class="text-4xl md:text-5xl mb-6">Investor FAQs.</h2>
+          <p class="text-lg text-brand-mid/70">Common questions from buyers, owners, and international investors.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>Can international buyers purchase ABOGLOBE properties?</summary>
+            <p>Yes — international buyers are welcome. BC's foreign buyer tax applies to certain properties, and our team will walk you through the additional 20% tax, exemptions, and structuring options before you commit.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What deposit structure do you offer on pre-sale?</summary>
+            <p>Typically 5% on contract, 5% at six months, and 5% at completion. For larger commitments, we can structure the deposit across milestones to align with your capital deployment timeline.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer financing?</summary>
+            <p>We work with several Canadian banks and private lenders who specialize in pre-sale and construction financing for foreign and domestic buyers. We can introduce you to vetted partners.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do you ensure build quality?</summary>
+            <p>Every project is built by vetted general contractors and inspected by independent third-party consultants at framing, envelope, MEP, and final stages. Materials are sourced from certified suppliers.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens after handover?</summary>
+            <p>All projects come with the standard BC 2-5-10 warranty, plus our own 12-month post-completion service desk for warranty items and minor fixes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="cta-heading">
+      <div class="absolute inset-0 opacity-5" style="background-image:url('https://www.transparenttextures.com/patterns/cubes.png')" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+        <h2 id="cta-heading" class="text-3xl md:text-5xl text-white mb-6">Invest in Vancouver's future.</h2>
+        <p class="text-lg text-brand-cream/70 mb-10 max-w-2xl mx-auto">Book a private viewing or speak with our investment team about current availability.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contact.html" class="btn btn-gold text-lg">Book a Private Viewing</a>
+          <a href="vendor-portal.html" class="btn btn-ghost-light text-lg">Owner Login</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#2a1a11] text-brand-cream/60 pt-20 pb-8 border-t border-brand-mid/30">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      <div class="md:col-span-4">
+        <img src="images/logo.png" alt="ABOGLOBE" class="h-16 w-auto mb-6 brightness-0 invert opacity-90" width="64" height="64" loading="lazy" />
+        <p class="text-sm leading-relaxed max-w-xs">A Vancouver-based subsidiary of ZM PROPERTY TRUST GROUP LTD, leading global financial and trading operations.</p>
+      </div>
+      <div class="md:col-span-2">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition-colors">Contact</a></li>
+          <li><a href="login.html" class="hover:text-brand-gold transition-colors">Vendor Login</a></li>
+          <li><a href="signup.html" class="hover:text-brand-gold transition-colors">Create Account</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Expertise</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="commodity.html" class="hover:text-brand-gold transition-colors">Commodity Trading</a></li>
+          <li><a href="investment.html" class="hover:text-brand-gold transition-colors">Investment Products</a></li>
+          <li><a href="medical.html" class="hover:text-brand-gold transition-colors">Medical &amp; PPE</a></li>
+          <li><a href="real-estate.html" class="hover:text-brand-gold transition-colors">Real Estate</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest font-sans">Contact</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="lni lni-map-marker text-brand-gold text-lg" aria-hidden="true"></i> Suite 305 5811 Cooney Rd. Richmond BC, Canada V6X3M1</li>
+          <li class="flex gap-3"><i class="lni lni-phone text-brand-gold text-lg" aria-hidden="true"></i> 778-744-3806</li>
+          <li class="flex gap-3"><i class="lni lni-envelope text-brand-gold text-lg" aria-hidden="true"></i> drli@aboglobe.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>&copy; <span id="year"></span> ABOGLOBE International INC. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="LinkedIn"><i class="lni lni-linkedin-original text-lg" aria-hidden="true"></i></a>
+        <a href="#" class="hover:text-brand-gold transition-colors" aria-label="Twitter"><i class="lni lni-twitter-original text-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FAB ============ -->
+  <div id="fab-container" class="fab-container">
+    <div class="fab-secondary">
+      <button id="fab-scroll-action" class="fab-action scroll-action" aria-label="Scroll to top">
+        <span>Back to top</span><span class="fab-icon"><i class="lni lni-arrow-up" aria-hidden="true"></i></span>
+      </button>
+      <button id="fab-chat-action" class="fab-action chat-action" aria-label="Open chat">
+        <span>Chat with us</span><span class="fab-icon"><i class="lni lni-comments-alt-2" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <button id="fab-main" class="fab-main" aria-label="Open actions menu" aria-expanded="false">
+      <span class="icon-menu"><i class="lni lni-plus" aria-hidden="true"></i></span>
+      <span class="icon-close"><i class="lni lni-close" aria-hidden="true"></i></span>
+      <div id="fab-badge" class="fab-badge" aria-hidden="true"></div>
+    </button>
+  </div>
+
+  <!-- ============ CHAT ============ -->
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="ABOGLOBE AI assistant" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar" aria-hidden="true"><i class="lni lni-robot"></i></div>
+        <div class="chat-header-text">
+          <h4>ABO AI Assistant</h4>
+          <p><span class="w-2 h-2 rounded-full bg-green-500 inline-block" aria-hidden="true"></span> Online · Ready to help</p>
+        </div>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Close chat"><i class="lni lni-close" aria-hidden="true"></i></button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="typing-indicator" class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." autocomplete="off" aria-label="Chat input" />
+      <button id="chat-send" aria-label="Send message"><i class="lni lni-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
